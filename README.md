@@ -62,7 +62,7 @@
 - My Cart
 - Checkout Page
 - Responsive Design.
-- State Management using Redux toolkit.
+- State Management using Redux.
 - Use latest ES6 modules.
 - Online Payment Gateways
 - Axios for making HTTP requests from the server.
