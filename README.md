@@ -28,6 +28,7 @@
 
 
 **My Shop** is an e-commerce template for my online shop. It has a responsive frontend layout coded in React while fetching asynchronous data from API end-points built with Ruby on Rails. 
+**My Shop** is an e-commerce template for my online shop. It has a responsive frontend layout coded in React while fetching asynchronous data from API end-points built with Ruby on Rails. 
 
 ![]()
 
@@ -84,7 +85,9 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 To run this project you need:
+To run this project you need:
 
+- [API](https://github.com/blase147/my-shop)
 - [API](https://github.com/blase147/my-shop)
 - [git](https://git-scm.com/)
 - [node.js](https://nodejs.org/en/)
