@@ -27,7 +27,7 @@
 # 📖 My Shop<a name="about-the-project"></a>
 
 
-**My Shop** is an ecommerce template for my online shop. It has a responsive frontend layedout in React while fetching assynchronous data from API end-points built with Ruby on Rails. 
+**My Shop** is an e-commerce template for my online shop. It has a responsive frontend layout coded in React while fetching asynchronous data from API end-points built with Ruby on Rails. 
 
 ![]()
 
@@ -83,9 +83,9 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+To run this project you need:
 
-- [API](https://github.com/blase147/my_shop)
+- [API](https://github.com/blase147/my-shop)
 - [git](https://git-scm.com/)
 - [node.js](https://nodejs.org/en/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -95,7 +95,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-  git clone git@github.com:blase147/myShop.git
+  git clone git@github.com:blase147/my-shop.git
   cd myShop
 ```
 
@@ -158,7 +158,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/blase147/my_shop/issues).
+Feel free to check the [issues page](https://github.com/blase147/my-shop/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,7 +166,7 @@ Feel free to check the [issues page](https://github.com/blase147/my_shop/issues)
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project and want to support me make cooler projects Give this project a Star.
+If you like this project and want to support me in making cooler projects Give this project a Star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
