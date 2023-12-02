@@ -3,7 +3,7 @@
 
 # 📗 Table of Contents
 
-- [📖 Luxury Cars Lending](#-My Shop)
+- [📖 My Shop](#-My Shop)
   - [🛠 Built With](#-built-with-)
     - [Tech Stack](#tech-stack-)
     - [Key Features](#key-features-)
