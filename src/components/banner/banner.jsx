@@ -1,13 +1,18 @@
 import React from 'react';
+import ImageSlider from '../ImageSlider/ImageSlider';
 
-const Banner = () => (
-  <div className="banner">
-    <div className="main_cover">
-      <div className="l">
-        <h2>Banner</h2>
-      </div>
+const Banner = () => {
+  const images = [
+    'https://placekitten.com/800/400',
+    'https://placekitten.com/801/400',
+    'https://placekitten.com/802/400',
+    // Add more image URLs as needed
+  ];
+
+  return (
+    <div className="App">
+      <ImageSlider images={images} />
     </div>
-  </div>
-);
+  )}
 
 export default Banner;

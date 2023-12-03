@@ -1,22 +1,23 @@
 .menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #fff;
   padding: 20px;
   position: -webkit-sticky;
   position: sticky;
   top: 0; /* Set a value for the 'top' property to make it sticky at the top */
+  z-index:5000;
 
   ul {
     list-style: none;
     padding: 0;
-    margin-right: 80px;
+    // margin-right: 80px;
     display: flex;
   }
 
   li {
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
   a {
@@ -27,7 +28,10 @@
 
 .menu_header {
   display: flex;
-  justify-content: space-around;
-  // align-items: center;
-  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
 }

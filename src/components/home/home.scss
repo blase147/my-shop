@@ -4,28 +4,29 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  // gap: 5px;
-  // background-color: green;
+  width: 80%;
+  gap: 60px;
+  margin: auto;
 
   .logo {
-    display: flex;
-    align-self: center;
+    // display: flex;
+    // align-self: center;
     // background-color: rgb(23, 0, 128);
     // width: 13.3%;
-    margin-left: auto;
+    // margin-left: auto;
   }
 
   .header {
-    width: 33.3%;
+    // width: 20.3%;
   }
 
   .search {
-    display: flex;
-    align-self: center;
-    justify-content: center;
+    // display: flex;
+    // align-self: center;
+    // justify-content: center;
     // background-color: #720808;
-    width: 60%;
-    margin-left: auto; /* Move the entire div to the right */
+    // width: 60%;
+    // margin-left: auto; /* Move the entire div to the right */
   }
 }
 

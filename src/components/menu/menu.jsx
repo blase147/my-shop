@@ -37,10 +37,8 @@ const Menu = () => {
   ];
 
   return (
-    <div className="menu">
-      <div className='menu_header'>
+    <div className="menu menu_header">
         {isHeaderVisible &&  <Logo />}
-      </div>
       <ul>
         {navLinks.map(({ url, name }) => (
           <li key={name}>
@@ -49,8 +47,6 @@ const Menu = () => {
         ))}
       </ul>
 
-      <div className='menu_header'>
         {isHeaderVisible &&  <Header />}
-      </div>
-   </div>)}
+    </div>)}
 export default Menu;
