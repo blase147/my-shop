@@ -1,18 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './menu.scss';
+import Header from '../header/header';
+import Logo from '../logo/logo';
 
 const Menu = () => {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+
+      // Adjust the threshold as needed
+      const showHeaderThreshold = windowHeight * 0.13;
+      const hideHeaderThreshold = windowHeight; // Adjust the threshold as needed
+
+
+      setIsHeaderVisible(scrollPosition < showHeaderThreshold);
+      setIsHeaderVisible(scrollPosition > showHeaderThreshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const navLinks = [
     { url: '/', name: 'Home' },
     { url: '/category', name: 'Category' },
     { url: '/contactUs', name: 'Contact Us' },
     { url: '/products', name: 'Products' },
     { url: '/blog', name: 'Blog' },
-  ].filter(Boolean);
+  ];
 
   return (
     <div className="menu">
+      <div className='menu_header'>
+        {isHeaderVisible &&  <Logo />}
+      </div>
       <ul>
         {navLinks.map(({ url, name }) => (
           <li key={name}>
@@ -20,8 +48,9 @@ const Menu = () => {
           </li>
         ))}
       </ul>
-    </div>
-  );
-};
 
+      <div className='menu_header'>
+        {isHeaderVisible &&  <Header />}
+      </div>
+   </div>)}
 export default Menu;

@@ -4,7 +4,7 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  gap: 5px;
+  // gap: 5px;
   // background-color: green;
 
   .logo {
@@ -16,7 +16,6 @@
   }
 
   .header {
-    padding: 0;
     width: 33.3%;
   }
 
@@ -25,7 +24,7 @@
     align-self: center;
     justify-content: center;
     // background-color: #720808;
-    width:60%;
+    width: 60%;
     margin-left: auto; /* Move the entire div to the right */
   }
 }
