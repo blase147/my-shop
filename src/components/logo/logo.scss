@@ -1,0 +1,14 @@
+.logo_cont {
+  display: flex;
+  justify-content: center;
+  // background-color: rgb(23, 0, 128);
+  width: 33.3%;
+
+  .logo_image {
+    display: flex;
+    align-self: center;
+    // background-color: rgb(23, 0, 128);
+    width: 23.3%;
+
+  }
+}

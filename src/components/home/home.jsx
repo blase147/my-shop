@@ -1,4 +1,3 @@
-import './home.scss';
 import React from 'react';
 import Banner from '../banner/banner';
 import Footer from '../footer/footer';
@@ -23,15 +22,18 @@ import FlashSale from '../flashSale/flashSale';
 import FeaturedProducts from '../featuredProduct/featuredProducts';
 import BlogNews from '../blogNews/blogNews';
 import Menu from '../menu/menu';
+import Logo from '../logo/logo';
+import './home.scss';
 
 function Home() {
   return (
     <div className="Home">
-      <div className="top_header">
-        <Header />
+      <div className="search_header">
+        <Logo />
         <Search />
+        <Header />
       </div>
-      <Menu />
+      <Menu className="menu" />
       <Banner />
       <Category />
       <Collection />

@@ -1,25 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faHeart, faUser} from '@fortawesome/free-solid-svg-icons';
+import './header.scss';
 
 const Header = () => {
   const HeaderItems = [
-    { url: '/myCart', name: 'My Cart' },
-    { url: '/myFavourites', name: 'My Favourites' },
+    { url: '/myAccount',  icon: faUser },
+    { url: '/myCart',  icon: faShoppingCart },
+    { url: '/myFavourites',  icon: faHeart },
   ].filter(Boolean);
 
   return (
     <div className="header">
-      <div className="header_inner">
-        <div className="header_title">
-          <ul>
-            {HeaderItems.map(({ url, name }) => (
-              <li key={name}>
-                <Link to={url}>{name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <ul>
+        {HeaderItems.map(({ url, icon }) => (
+          <li key={icon}>
+            <Link to={url}>
+              <FontAwesomeIcon icon={icon} size='2x'/>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

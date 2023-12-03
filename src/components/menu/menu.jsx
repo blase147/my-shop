@@ -8,19 +8,18 @@ const Menu = () => {
     { url: '/category', name: 'Category' },
     { url: '/contactUs', name: 'Contact Us' },
     { url: '/products', name: 'Products' },
+    { url: '/blog', name: 'Blog' },
   ].filter(Boolean);
 
   return (
     <div className="menu">
-      <div className="header_title">
-        <ul>
-          {navLinks.map(({ url, name }) => (
-            <li key={name}>
-              <Link to={url}>{name}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul>
+        {navLinks.map(({ url, name }) => (
+          <li key={name}>
+            <Link to={url}>{name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
