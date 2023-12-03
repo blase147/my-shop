@@ -27,8 +27,10 @@ import Menu from '../menu/menu';
 function Home() {
   return (
     <div className="Home">
-      <Header />
-      <Search />
+      <div className="top_header">
+        <Header />
+        <Search />
+      </div>
       <Menu />
       <Banner />
       <Category />
