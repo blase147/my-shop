@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import './search.scss';
 
 const Search = ({ onSearch }) => {
@@ -9,7 +10,7 @@ const Search = ({ onSearch }) => {
     const handleOutsideClick = (event) => {
       if (searchInputRef.current && !searchInputRef.current.contains(event.target)) {
         // Clicked outside the input
-        document.getElementById("searchbtn").innerHTML = "&#128269;";
+        document.getElementById('searchbtn').innerHTML = '&#128269;';
       }
     };
 
@@ -29,14 +30,14 @@ const Search = ({ onSearch }) => {
   };
 
   const changeSearchIcon = () => {
-    document.getElementById("searchbtn").innerHTML = "Search";
+    document.getElementById('searchbtn').innerHTML = 'Search';
   };
 
   return (
-    <div className='search'>
+    <div className="search">
       <input
         type="text"
-        placeholder="&#128269; Search..."  // HTML entity for a magnifying glass
+        placeholder="&#128269; Search..." // HTML entity for a magnifying glass
         value={query}
         onChange={handleInputChange}
         onFocus={changeSearchIcon}
@@ -44,11 +45,16 @@ const Search = ({ onSearch }) => {
         ref={searchInputRef}
         style={{ border: 'none' }}
       />
-      <button id='searchbtn' onClick={handleSearch} style={{ border: 'none' }}>
+      <button type="button" id="searchbtn" onClick={handleSearch} style={{ border: 'none' }}>
         &#128269;
       </button>
     </div>
   );
+};
+
+// Add PropTypes validation
+Search.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default Search;

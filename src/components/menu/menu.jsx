@@ -14,8 +14,6 @@ const Menu = () => {
 
       // Adjust the threshold as needed
       const showHeaderThreshold = windowHeight * 0.13;
-      const hideHeaderThreshold = windowHeight; // Adjust the threshold as needed
-
 
       setIsHeaderVisible(scrollPosition < showHeaderThreshold);
       setIsHeaderVisible(scrollPosition > showHeaderThreshold);
@@ -38,7 +36,7 @@ const Menu = () => {
 
   return (
     <div className="menu menu_header">
-        {isHeaderVisible &&  <Logo />}
+      {isHeaderVisible && <Logo /> }
       <ul>
         {navLinks.map(({ url, name }) => (
           <li key={name}>
@@ -46,7 +44,8 @@ const Menu = () => {
           </li>
         ))}
       </ul>
-
-        {isHeaderVisible &&  <Header />}
-    </div>)}
+      {isHeaderVisible && <Header /> }
+    </div>
+  );
+};
 export default Menu;

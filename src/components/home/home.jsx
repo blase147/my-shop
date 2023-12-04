@@ -36,6 +36,10 @@ function Home() {
       <Menu className="menu" />
       <Banner />
       <Category />
+      <div className="luxury">
+        <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485" alt="luxury watch" className="luxury_image" />
+        <h2>Classic Gold Diamond. Philip Patek</h2>
+      </div>
       <Collection />
       <ContactUs />
       <CustomerFavourites />
