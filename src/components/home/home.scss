@@ -36,23 +36,30 @@
 }
 
 .luxury {
-  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  // background-color: red;
 
-  .luxury_image {
-    width: 50%;
-    height: 100%;
-    // background-color: lightblue;
-    border-radius: 10%;
+  .luxury_image{
+    // display: flex;
+    width: 100%;
+    background-color: lightblue;
+    border-radius: 5%;
     padding: 10px;
   }
 
   h2 {
     position: relative;
     top: -105px;
-    right: -270px;
+    right: -7px; 
     background-color: #fff;
-    border-radius: 10%;
+    border-radius: 10%;  
     font-size: 1.2em;
-    width: 40%;
+    width: 60%;
   }
 }

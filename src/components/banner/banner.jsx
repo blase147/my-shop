@@ -5,16 +5,16 @@ import './banner.scss';
 const Banner = () => {
   const images = [
     {
-      image: 'https://placekitten.com/800/400', major_desc: 'Image 1', minor_desc: '126 Products', button: 'Shop Now',
+      image: 'https://placekitten.com/800/400', major_desc: 'Classic Wears ', minor_desc: 'Original and Stylish', button: <button type="button">Shop Now</button>,
     },
     {
-      image: 'https://placekitten.com/802/400', major_desc: 'Image 2', minor_desc: '126 Products', button: 'Shop Now',
+      image: 'https://placekitten.com/802/400', major_desc: 'Pecky Vintage', minor_desc: 'Your style , your choice', button: <button type="button">Shop Now</button>,
     },
     {
-      image: 'https://placekitten.com/803/400', major_desc: 'Image 3', minor_desc: '126 Products', button: 'Shop Now',
+      image: 'https://placekitten.com/803/400', major_desc: 'Gold Plated', minor_desc: 'Original Diamond', button: <button type="button">Shop Now</button>,
     },
     {
-      image: 'https://placekitten.com/804/400', major_desc: 'Image 4', minor_desc: '126 Products', button: 'Shop Now',
+      image: 'https://placekitten.com/804/400', major_desc: 'Over rated', minor_desc: 'Dandies and Hotties Goals', button: <button type="button">Shop Now</button>,
     },
   ];
   return (

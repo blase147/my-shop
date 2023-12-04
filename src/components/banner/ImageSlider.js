@@ -35,7 +35,7 @@ const ImageSlider = ({ images }) => {
             <div className="image_desc">
               <h3>{image.major_desc}</h3>
               <p>{image.minor_desc}</p>
-              <div>{image.button}</div>
+              <div className="shopbtn">{image.button}</div>
             </div>
           </div>
         ))}

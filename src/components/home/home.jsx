@@ -37,7 +37,7 @@ function Home() {
       <Banner />
       <Category />
       <div className="luxury">
-        <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485" alt="luxury watch" className="luxury_image" />
+        <img src="https://getbutler.com/wp-content/uploads/2020/11/best-luxury-watches-to-invest-in-2020-0.jpg" alt="luxury watch" className="luxury_image" />
         <h2>Classic Gold Diamond. Philip Patek</h2>
       </div>
       <Collection />
