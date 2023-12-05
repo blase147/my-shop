@@ -5,25 +5,19 @@ import CopyRight from '../copyright/copyright';
 import Header from '../header/header';
 import Category from '../category/category';
 import Search from '../search/search';
-import Collection from '../collection/collection';
 import ContactUs from '../contactUs/contactUs';
 import CustomerFavourites from '../customerFavourites/customerFavourites';
-import MyCart from '../myCart/myCart';
-import Product from '../product/product';
-import Products from '../products/products';
 import Testimonials from '../testimonials/testimonials';
 import Newsletter from '../newsletterSub/newsletterSub';
 import OurBrands from '../ourBrands/ourBrands';
 import ShopGallery from '../shopGallery/shopGallery';
-import Checkout from '../checkout/checkout';
-import Login from '../login/login';
-import Register from '../register/register';
 import FlashSale from '../flashSale/flashSale';
 import FeaturedProducts from '../featuredProduct/featuredProducts';
 import BlogNews from '../blogNews/blogNews';
 import Menu from '../menu/menu';
 import Logo from '../logo/logo';
 import './home.scss';
+import Services from '../services/services';
 
 function Home() {
   return (
@@ -36,24 +30,29 @@ function Home() {
       <Menu className="menu" />
       <Banner />
       <Category />
+      <Services />
       <div className="luxury">
-        <img src="https://getbutler.com/wp-content/uploads/2020/11/best-luxury-watches-to-invest-in-2020-0.jpg" alt="luxury watch" className="luxury_image" />
-        <h2>Classic Gold Diamond. Philip Patek</h2>
+        <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury_image" />
+        <h2>Philip Patek</h2>
       </div>
-      <Collection />
+      <FlashSale />
+      <div className="luxury2">
+        <div className="luxury2_image_cont">
+          <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury2_image" />
+          <h2>Philip Patek</h2>
+        </div>
+        <div className="luxury2_image_cont">
+          <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury2_image" />
+          <h2>Philip Patek</h2>
+        </div>
+      </div>
+
       <ContactUs />
       <CustomerFavourites />
-      <MyCart />
-      <Product />
-      <Products />
       <Testimonials />
       <Newsletter />
       <OurBrands />
       <ShopGallery />
-      <Checkout />
-      <Login />
-      <Register />
-      <FlashSale />
       <FeaturedProducts />
       <BlogNews />
       <Footer />

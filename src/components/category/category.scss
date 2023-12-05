@@ -1,25 +1,27 @@
 /* ImageSlider.css */
 .full-screen-slider {
-  width: 80%;
+  width: 85%;
   margin-left: auto;
 }
 
-.full-screen-slider .slick-slide {
-  margin: 0 0;
+.full-screen-slider .slick-slide img {
   width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0;
 }
 
-.full-screen-slider .slick-slide img {
-  margin: auto;
-  width: 100%;
+.full-screen-slider
+.slick-slide {
+  margin: 0; /* Adjust the value as needed for the desired gap */
+  position: relative; /* Ensure relative positioning for absolute child */
   background-color: lightblue;
-  border-radius: 10%;
-  padding: 10px;
 }
 
 .full-screen-slider .slick-prev,
 .full-screen-slider .slick-next {
-  font-size: 24px;
+  font-size: 44px;
   z-index: 1;
 }
 
@@ -32,7 +34,7 @@
 }
 
 .category_label {
-  width: 80%;
+  width: 85%;
   text-align: left;
   margin-left: auto;
   padding: 0;
@@ -43,3 +45,4 @@
   padding: 43px 20px 102px 0;
   margin-bottom: 50px;
 }
+
