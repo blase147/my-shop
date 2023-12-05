@@ -1,0 +1,22 @@
+.copyright {
+  font-size: 12px;
+  margin-top: 0;
+  background-color: black;
+
+  .copyright_cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    color: #999;
+    font-size: 12px;
+    margin-left: 260px;
+
+    .copyright_text {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.5em;
+      gap: 5px;
+    }
+  }
+}
