@@ -5,8 +5,8 @@
   background-color: lightblue;
   position: relative; /* Ensure relative positioning for absolute child */
 }
-.banner_slider
-.slick-slide {
+
+.banner_slider .slick-slide {
   margin: 0; /* Adjust the value as needed for the desired gap */
   position: relative; /* Ensure relative positioning for absolute child */
   background-color: lightblue;

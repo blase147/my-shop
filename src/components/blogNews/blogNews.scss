@@ -1,0 +1,89 @@
+.blogNews {
+
+    .blogNews_label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        width: 100%;
+        color: #e70e0e;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .blogNews_cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+        width: 100%;
+        margin: auto;
+    
+        .blogNews_card {
+            width: 25%;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+    
+            .blogNews_image {
+                width: 94%; /* Adjusted width */
+                padding: 10px;
+                background-color: rgb(14, 0, 0);
+            }
+
+            .date {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 0 10px;
+                box-sizing: border-box;
+                width: 100%;
+                color: #8d8585;
+                }
+
+                .title {
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    color: #000000;
+                    text-align: left;
+                }
+
+                .desc {
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.2;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    color: #8d8585;
+                    text-align: left;
+                }
+
+                .readmore {
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.2;
+                    margin-top: 45px;
+                    margin-bottom: 5px;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    color: #8d8585;
+                    text-align: left;
+                }
+        }
+    }
+}

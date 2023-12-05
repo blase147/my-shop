@@ -5,14 +5,12 @@ import CopyRight from '../copyright/copyright';
 import Header from '../header/header';
 import Category from '../category/category';
 import Search from '../search/search';
-import ContactUs from '../contactUs/contactUs';
 import CustomerFavourites from '../customerFavourites/customerFavourites';
 import Testimonials from '../testimonials/testimonials';
 import Newsletter from '../newsletterSub/newsletterSub';
 import OurBrands from '../ourBrands/ourBrands';
 import ShopGallery from '../shopGallery/shopGallery';
 import FlashSale from '../flashSale/flashSale';
-import FeaturedProducts from '../featuredProduct/featuredProducts';
 import BlogNews from '../blogNews/blogNews';
 import Menu from '../menu/menu';
 import Logo from '../logo/logo';
@@ -46,15 +44,15 @@ function Home() {
           <h2>Philip Patek</h2>
         </div>
       </div>
-
-      <ContactUs />
+      <h2>Customers Favourites</h2>
       <CustomerFavourites />
       <Testimonials />
-      <Newsletter />
       <OurBrands />
+      <hr />
       <ShopGallery />
-      <FeaturedProducts />
+      <hr />
       <BlogNews />
+      <Newsletter />
       <Footer />
       <CopyRight />
     </div>

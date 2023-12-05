@@ -1,0 +1,57 @@
+.customerFavourites_cont {
+  margin-bottom: 150px;
+
+  .customerFavourites {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    gap: 30px;
+    justify-content: center; /* Center items horizontally */
+
+    .customerFavourites_card {
+      display: flex;
+      gap: 10px;
+      align-items: start;
+      flex-direction: column;
+      width: 20%;
+
+      .discount_cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #8fec9f;
+        border-radius: 15%;
+        color: #000;
+        font-size: 0.8em;
+        padding: 5px 10px; /* Adjust as needed */
+        position: relative;
+        top: 45px;
+        left: 10px;
+        font-weight: 900;
+      }
+
+      .customerFavourites_image {
+        width: 100%;
+        border-radius: 25px;
+      }
+    }
+  }
+
+  h4 {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+
+    button {
+      background-color: #720808;
+      color: #fff;
+      border-radius: 10px;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      outline: none;
+      cursor: pointer;
+      margin: 3px;
+    }
+  }
+}

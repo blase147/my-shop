@@ -12,8 +12,7 @@
   margin: 0;
 }
 
-.full-screen-slider
-.slick-slide {
+.full-screen-slider .slick-slide {
   margin: 0; /* Adjust the value as needed for the desired gap */
   position: relative; /* Ensure relative positioning for absolute child */
   background-color: lightblue;
@@ -45,4 +44,3 @@
   padding: 43px 20px 102px 0;
   margin-bottom: 50px;
 }
-
