@@ -1,4 +1,6 @@
 .blogNews {
+width: 80%;
+margin-left: auto;
 
     .blogNews_label {
         display: flex;
@@ -11,6 +13,7 @@
         font-size: 2em;
         font-weight: 700;
         line-height: 1.2;
+        text-align: left;
     }
     .blogNews_cont {
         display: flex;
@@ -21,7 +24,7 @@
         margin: auto;
     
         .blogNews_card {
-            width: 25%;
+            width: 90%;
             margin-bottom: 5px;
             border: 1px solid #ccc;
             padding: 10px;

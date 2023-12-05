@@ -11,7 +11,7 @@ const ImageSlider = ({ news }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
@@ -43,6 +43,7 @@ const ImageSlider = ({ news }) => {
               </p>
               <h3 className="title">{item.title}</h3>
               <p className="desc">{item.desc}</p>
+              <p className="readmore">Read more...</p>
             </div>
           </div>
         ))}
