@@ -1,42 +1,56 @@
 .newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
     background-color: lightblue;
-    border-radius: 0.5rem;
-    margin: 2rem 0;
-    text-align: center;
     padding: 100px;
-    h2 {
+    margin-top: 100px;
+    .newsletter_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin: 2rem 0;
+      text-align: center;
+  
+      h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-    }
-    p {
+      }
+  
+      p {
         margin-bottom: 1rem;
-    }
-
-    .newsletter_form {
-    form {
+      }
+  
+      form {
         display: flex;
-        flex-direction: column;
         align-items: center;
-    .newsletter_form
+        justify-content: center;
+        padding: 5px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+  
+        width: 100%; /* Make the form take the full width of its container */
+        max-width: 400px; /* Set a max-width for better readability */
+  
         input {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
+        //   width: 100%;
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 0.5rem;
+          margin-bottom: 1rem;
+          margin: 0;
         }
+  
         button {
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 0.5rem;
-        background-color: #333;
-        color: #fff;
-        cursor: pointer;
+        //   width: 100%; 
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 1.5rem;
+          background-color: #333;
+          color: #fff;
+          cursor: pointer;
         }
+      }
     }
-}.newsletter_form
+  }
+  
