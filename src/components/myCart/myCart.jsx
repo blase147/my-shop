@@ -6,6 +6,9 @@ import { IoCartOutline } from 'react-icons/io5';
 const MyCart = () => (
   <div className="myCart">
     <div className="title_closebtn">
+      <div className="cart_no">
+        <p>2</p>
+      </div>
       <h2>
         <IoCartOutline size={30} />
         SHOPPING CART
@@ -32,7 +35,9 @@ const MyCart = () => (
           <div className="myCart_addmorebtn">
             <button type="button">-</button>
             1
-            <button type="button">+</button>
+            <button type="button">
+              +
+            </button>
             <FaTrash className="trashbtn" />
           </div>
         </div>
@@ -59,8 +64,7 @@ const MyCart = () => (
       </div>
       <label htmlFor="termsCheckbox" className="termsCheckbox">
         <input type="checkbox" id="termsCheckbox" className="checkbox" />
-        I agree
-        to the Terms & Conditions
+        I agree to the Terms & Conditions
       </label>
     </div>
   </div>

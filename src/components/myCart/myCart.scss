@@ -10,17 +10,41 @@
   margin: auto;
   border: 1px solid black;
   border-radius: 5px;
-  // padding: 10px;
+  padding-top: 10px;
 
   .title_closebtn {
     display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    // gap: 40px;
-    background-color: red;
     width: 100%;
 
+    .cart_no {
+      background-color: red;
+      border-radius: 50%;
+      width: 20px; /* Adjust the width to your preference */
+      height: 20px; /* Keep the height the same as width to maintain a circular shape */
+      font-size: 1.0em;
+      font-weight: 900;
+      position: relative;
+      top: -10px;
+      left: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: baseline;
+      // background-color: red;
+      margin-left: 5px;
+      gap: 5px;
+      // font-size: 1.5em;
+      font-weight: 900;
+      margin: 0;
+    }
     button {
       background-color: transparent;
       border: none;
@@ -64,6 +88,7 @@
         // background-color: yellow;
         margin-top: 0;
         padding: 0;
+        // gap: 0;
 
         .cart_title {
           font-weight: 900;
