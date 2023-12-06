@@ -1,11 +1,10 @@
 import React from 'react';
+import './myFavourites.scss';
 
 const MyFavourites = () => (
-  <div className="myCart">
-    <div className="myCart_inner">
-      <div className="myCart_title">
-        <h2>My Favourites</h2>
-      </div>
+  <div className="myfav">
+    <div className="myfav_cont">
+      <h2>My Favourites</h2>
     </div>
   </div>
 );

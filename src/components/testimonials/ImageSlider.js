@@ -23,11 +23,12 @@ const ImageSlider = ({ images }) => {
         speed={settings.speed}
         slidesToShow={settings.slidesToShow}
         slidesToScroll={settings.slidesToScroll}
+        className="show_testimonials"
       >
         {images.map((testimonial) => (
           <div key={testimonial.id}>
-            <div className="rating">{testimonial.rating}</div>
-            <p className="desc">{testimonial.desc}</p>
+            <p className="">{testimonial.rating}</p>
+            <p className="">{testimonial.desc}</p>
             <h3>{testimonial.name}</h3>
           </div>
         ))}
