@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './myCart.scss';
 import { FaTrash } from 'react-icons/fa';
 import { IoCartOutline } from 'react-icons/io5';
 
-const MyCart = () => (
+const MyCart = ({ onClose }) => (
   <div className="myCart">
     <div className="title_closebtn">
       <h2>
@@ -13,7 +14,7 @@ const MyCart = () => (
         <IoCartOutline size={30} />
         SHOPPING CART
       </h2>
-      <button type="button" aria-hidden="true">
+      <button type="button" aria-hidden="true" onClick={onClose}>
         X
       </button>
     </div>
@@ -69,5 +70,9 @@ const MyCart = () => (
     </div>
   </div>
 );
+
+MyCart.propTypes = {
+  onClose: PropTypes.func.isRequired, // onClose should be a function and is required
+};
 
 export default MyCart;

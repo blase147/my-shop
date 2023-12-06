@@ -1,16 +1,19 @@
 .myCart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
   height: 100%;
-  width: 100%;
+  width: 20%;
   background-color: rgb(252, 247, 247);
-  width: 30%;
-  margin: auto;
+  // margin-right: 0;
   border: 1px solid black;
   border-radius: 5px;
-  padding-top: 10px;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 
   .title_closebtn {
     display: flex;
@@ -57,9 +60,6 @@
 
   .myCart_cont {
     display: flex;
-    // padding: 2rem;
-    // text-align: center;
-    // margin: auto;
 
     .myCart_card {
       display: flex;
@@ -86,7 +86,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 50%;
+        width: 100%;
         // background-color: yellow;
         margin-top: 0;
         padding: 0;
@@ -98,7 +98,8 @@
         }
         .cart_desc {
           font-size: 1em;
-          text-align: left;
+          // text-align: left;
+          margin-left: 0;
         }
         .cart_price {
           font-weight: 900;
@@ -118,6 +119,9 @@
             cursor: pointer;
           }
         }
+        .trashbtn {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -128,7 +132,8 @@
     // margin: auto;
     width: 100%;
     background-color: rgb(255, 255, 255);
-
+    position: absolute;
+    bottom: 0;
     .cart_total {
       display: flex;
       justify-content: space-between;
@@ -152,23 +157,21 @@
       }
     }
     .view_cart_btn {
-      width: 100%;
       button {
         background-color: grey;
         color: white;
-        width: 100%;
+        width: 98%;
         padding: 10px;
-        margin-bottom: 5px;
+        margin: 5px;
         border-radius: 5px;
         cursor: pointer;
       }
     }
     .checkout_btn {
-      width: 100%;
       button {
         background-color: blue;
         color: white;
-        width: 100%;
+        width: 98%;
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
