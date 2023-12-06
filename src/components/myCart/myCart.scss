@@ -111,6 +111,12 @@
           align-items: center;
           // background-color: red;
           width: 100%;
+          button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+          }
         }
       }
     }
