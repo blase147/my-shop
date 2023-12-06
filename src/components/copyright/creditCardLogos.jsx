@@ -2,10 +2,9 @@ import React from 'react';
 
 const CreditCardLogos = () => (
   <div className="creditCardLogos">
-    <img src="/visa-logo.svg" alt="Visa Logo" />
-    <img src="/mastercard-logo.svg" alt="Mastercard Logo" />
-    <img src="/amex-logo.svg" alt="American Express Logo" />
-    <img src="/discover-logo.svg" alt="Discover Logo" />
+    <img src="../../images/visa.png" alt="Visa Logo" width="30" height="20" className="credite_card" />
+    <img src="../../images/mastercard.png" alt="Mastercard Logo" width="30" height="20" className="credite_card" />
+    <img src="../../images/paypal.png" alt="American Express Logo" width="30" height="20" className="credite_card" />
   </div>
 );
 

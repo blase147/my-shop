@@ -3,7 +3,6 @@
   background-color: black;
   border-bottom: 1px solid #ffffff;
 
-
   .footer_cont {
     display: flex;
     justify-content: space-around;
@@ -28,6 +27,23 @@
         padding: 0;
         margin: 0;
       }
+    }
+  }
+}
+
+.social_icons_cont {
+  .social_icons {
+    display: flex;
+
+    a {
+      color: white;
+    }
+
+    .social_icon {
+      padding: 3px 10px;
+      background-color: blue;
+      margin-right: 5px;
+      border-radius: 5px;
     }
   }
 }

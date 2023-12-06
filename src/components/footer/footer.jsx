@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.scss';
+import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => (
   <div className="footer">
@@ -50,6 +51,20 @@ const Footer = () => (
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
+        <div className="social_icons_cont">
+          <h4>Follow us</h4>
+          <div className="social_icons">
+            <a href="https://www.facebook.com" aria-hidden="true">
+              <FaFacebook className="social_icon" size={20} />
+            </a>
+            <a href="https://www.linkedin.com" aria-hidden="true">
+              <FaLinkedin className="social_icon" size={20} />
+            </a>
+            <a href="https://www.twitter.com" aria-hidden="true">
+              <FaTwitter className="social_icon" size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
