@@ -5,7 +5,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(252, 247, 247);
   width: 30%;
   margin: auto;
   border: 1px solid black;
@@ -15,7 +15,18 @@
   .title_closebtn {
     display: flex;
     justify-content: space-around;
-    gap: 40px;
+    align-items: center;
+    align-content: center;
+    // gap: 40px;
+    background-color: red;
+    width: 100%;
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
   }
 
   .myCart_cont {
@@ -34,7 +45,7 @@
       padding: 12px;
       margin-bottom: 20px;
       scroll-behavior: smooth;
-      
+
       .myCart_img_cont {
         width: 50%;
         margin-right: 10px;
@@ -53,13 +64,13 @@
         // background-color: yellow;
         margin-top: 0;
         padding: 0;
-        
+
         .cart_title {
           font-weight: 900;
           margin-top: 0;
         }
         .cart_desc {
-          font-size: 1.0em;
+          font-size: 1em;
           text-align: left;
         }
         .cart_price {
@@ -67,8 +78,12 @@
           margin-top: 0;
         }
 
-        .trashbtn {
-          margin-left: 15px;
+        .myCart_addmorebtn {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          // background-color: red;
+          width: 100%;
         }
       }
     }
@@ -126,15 +141,15 @@
       }
     }
 
-      .termsCheckbox {
-        display: flex;
-        margin-bottom: 1rem;
-        align-items: center;
-        padding: 10px;
+    .termsCheckbox {
+      display: flex;
+      margin-bottom: 1rem;
+      align-items: center;
+      padding: 10px;
 
-        .checkbox {
-          margin-right: 1rem;
-        }
+      .checkbox {
+        margin-right: 1rem;
       }
+    }
   }
 }

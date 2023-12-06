@@ -1,11 +1,15 @@
 import React from 'react';
 import './myCart.scss';
 import { FaTrash } from 'react-icons/fa';
+import { IoCartOutline } from 'react-icons/io5';
 
 const MyCart = () => (
   <div className="myCart">
     <div className="title_closebtn">
-      <h2>SHOPPING CART</h2>
+      <h2>
+        <IoCartOutline size={30} />
+        SHOPPING CART
+      </h2>
       <button type="button" aria-hidden="true">
         X
       </button>
@@ -25,8 +29,10 @@ const MyCart = () => (
           <h3 className="cart_title">Rolex bangle</h3>
           <p className="cart_desc">Rolex bangle</p>
           <p className="cart_price">$1100</p>
-          <div>
-            -  1  +
+          <div className="myCart_addmorebtn">
+            <button type="button">-</button>
+            1
+            <button type="button">+</button>
             <FaTrash className="trashbtn" />
           </div>
         </div>
@@ -53,8 +59,8 @@ const MyCart = () => (
       </div>
       <label htmlFor="termsCheckbox" className="termsCheckbox">
         <input type="checkbox" id="termsCheckbox" className="checkbox" />
-        I agree to the Terms &
-        Conditions
+        I agree
+        to the Terms & Conditions
       </label>
     </div>
   </div>
