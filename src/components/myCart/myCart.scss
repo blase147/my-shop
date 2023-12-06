@@ -24,11 +24,11 @@
       border-radius: 50%;
       width: 20px; /* Adjust the width to your preference */
       height: 20px; /* Keep the height the same as width to maintain a circular shape */
-      font-size: 1.0em;
+      font-size: 0.6em;
       font-weight: 900;
       position: relative;
       top: -10px;
-      left: 55px;
+      left: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -154,6 +154,7 @@
         padding: 10px;
         margin-bottom: 5px;
         border-radius: 5px;
+        cursor: pointer;
       }
     }
     .checkout_btn {
@@ -165,6 +166,7 @@
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
+        cursor: pointer;
       }
     }
 

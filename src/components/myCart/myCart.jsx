@@ -6,10 +6,10 @@ import { IoCartOutline } from 'react-icons/io5';
 const MyCart = () => (
   <div className="myCart">
     <div className="title_closebtn">
-      <div className="cart_no">
-        <p>2</p>
-      </div>
       <h2>
+        <div className="cart_no">
+          <p>2</p>
+        </div>
         <IoCartOutline size={30} />
         SHOPPING CART
       </h2>
