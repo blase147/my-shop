@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './menu.scss';
 import Header from '../header/header';
 import Logo from '../logo/logo';
+import '../myCart/myCart.scss';
 
 const Menu = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);

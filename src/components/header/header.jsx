@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 import './header.scss';
 import MyCart from '../myCart/myCart';
+import '../myCart/myCart.scss';
 
 const Header = () => {
   const HeaderItems = [

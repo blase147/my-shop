@@ -1,37 +1,36 @@
-/* button and input styling */
-button,
-input {
-  border: none;
-}
-
-input {
-  // width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  outline: none;
-}
-
-#searchbtn {
-  background-color: #720808;
-  color: #fff;
-  border-radius: 40%;
-  padding: 0 10px;
-  box-sizing: border-box;
-  outline: none;
-  cursor: pointer;
-  margin: 3px;
-}
-
 .search {
   display: flex;
   align-self: center;
   justify-content: center;
   background-color: #720808;
   width: 60%;
-  margin-left: auto; /* Move the entire div to the right */
+  // margin-left: auto;
   border: 1px solid #ccc;
   border-radius: 15px;
-  height: 40px;
+  height: 2.5em;
+
+  button,
+  input {
+    border: none;
+  }
+
+  input {
+    width: 100%;
+    // height: 100%;
+    // border-radius: 15px;
+    padding: 0 10px;
+    // box-sizing: border-box;
+    // outline: none;
+  }
+
+  #searchbtn {
+    background-color: #720808;
+    color: #fff;
+    border-radius: 40%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    margin: 3px;
+  }
 }
