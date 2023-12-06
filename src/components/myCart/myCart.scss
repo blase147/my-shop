@@ -20,7 +20,7 @@
     width: 100%;
 
     .cart_no {
-      background-color: red;
+      background-color: rgb(64, 91, 212);
       border-radius: 50%;
       width: 20px; /* Adjust the width to your preference */
       height: 20px; /* Keep the height the same as width to maintain a circular shape */
@@ -32,6 +32,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      color: white;
+      padding: 1px;
     }
     
     h2 {
