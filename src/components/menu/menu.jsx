@@ -39,7 +39,7 @@ const Menu = () => {
   return (
     <div className="menu">
       <div className="menu_logo">{isHeaderVisible && <Logo />}</div>
-      <div>
+      <div className="menu_cont">
         <ul>
           {navLinks.map(({ url, name, hasDropdown }) => (
             <li
@@ -52,10 +52,16 @@ const Menu = () => {
                   <Link to={url}>{name}</Link>
                   {isCategoryHovered && (
                     <div className="dropdown">
-                      <Link to="/m">Mens</Link>
-                      <Link to="/mens">Womenss</Link>
-                      <Link to="/subcategory1">Children</Link>
-                      <Link to="/subcategory1">Babies</Link>
+                      <div className="dropdown_cont">
+                        <Link to="/m">Mens</Link>
+                        <Link to="/mens">Womens</Link>
+                        <Link to="/subcategory1">Children</Link>
+                        <Link to="/subcategory1">Babies</Link>
+                      </div>
+                      <div className="featured_category">
+                        <h3>Featured Category</h3>
+                        <img src="https://baajoo.com/wp-content/uploads/2023/05/MTP-VD200G-1B-000.jpg" alt="featured product" className="featured_category_image" />
+                      </div>
                     </div>
                   )}
                 </>
