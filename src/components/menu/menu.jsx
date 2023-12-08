@@ -50,8 +50,10 @@ const Menu = () => {
                 <Link to={url}>{name}</Link>
                 {isCategoryHovered && (
                   <div className="dropdown">
-                    <Link to="/subcategory1">Subcategory 1</Link>
-                    <Link to="/subcategory2">Subcategory 2</Link>
+                    <Link to="/subcategory1">Mens</Link>
+                    <Link to="/subcategory1">Womenss</Link>
+                    <Link to="/subcategory1">Children</Link>
+                    <Link to="/subcategory1">Babies</Link>
                   </div>
                 )}
               </>
