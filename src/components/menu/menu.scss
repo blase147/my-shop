@@ -1,58 +1,12 @@
 .menu {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #fff;
-  padding: 20px;
   position: -webkit-sticky;
   position: sticky;
   top: 0; /* Set a value for the 'top' property to make it sticky at the top */
   z-index: 900;
-  ul {
-    list-style: none;
-    padding: 0;
-    // margin-right: 80px;
-    display: flex;
-  }
-
-  li {
-    margin-right: 40px;
-  }
-
-  a {
-    text-decoration: none;
-    color: #333;
-  }
-}
-
-.menu_header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
   width: 100%;
-  margin: auto;
-}
-
-.modal {
-  height: 100%;
-  width: 20%;
-  background-color: rgb(252, 247, 247);
-  // margin-right: 0;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding-top: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/* Add this to your existing menu.scss or create a new CSS file */
-
-.menu {
-  position: sticky;
+  margin-bottom: 20px;
 }
 
 .dropdown {
@@ -83,9 +37,12 @@
   color: #333;
 }
 
-.menu a:hover {
-
-
+.menu_header ul {
+  padding: 0;
+  margin: 0;
 }
-
-
+.menu_header ul li {
+  display: flex;
+  margin: 0 5px 0 5px;
+  padding: 0;
+}

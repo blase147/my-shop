@@ -31,7 +31,8 @@ const Header = () => {
             {url === '/myCart' ? (
               // If the link is for MyCart, open the modal on click
               <button type="button" onClick={openCartModal}>
-                <FontAwesomeIcon icon={icon} size="2x" aria-label="My Cart" />
+                <FontAwesomeIcon icon={icon} size="2x" aria-label="My Cart" style={{ color: '1px solid #0f0f0f' }} />
+                <p className="cart_no_home">2</p>
               </button>
             ) : (
               // Otherwise, use Link

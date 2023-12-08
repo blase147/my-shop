@@ -25,7 +25,7 @@ function Home() {
         <Search />
         <Header />
       </div>
-      <Menu className="menu" />
+      <Menu />
       <Banner />
       <Category />
       <Services />
@@ -53,6 +53,7 @@ function Home() {
       <BlogNews />
       <Newsletter />
       <Footer />
+      <Menu />
       <CopyRight />
     </div>
   );

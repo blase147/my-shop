@@ -1,23 +1,46 @@
 .header {
   border-bottom: 1px solid #ccc;
+  align-items: center;
+  margin: 0 20px;
+  position: relative;
 
   button {
     background-color: #fff;
     border: none;
     cursor: pointer;
+    margin: 0;
+
+    .cart_no_home {
+      background-color: rgb(64, 91, 212);
+      border-radius: 50%;
+      width: 20px; /* Adjust the width to your preference */
+      height: 20px; /* Keep the height the same as width to maintain a circular shape */
+      font-size: 0.6em;
+      font-weight: 900;
+      position: absolute;
+      top: -50%;
+      left: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 1px;
+      z-index: 1000;
+    }
   }
 }
 
 .header ul {
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  align-items: center;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .header li {
   margin-right: 25px;
+  padding-bottom: 10px;
 }
 
 .header a {

@@ -4,6 +4,7 @@ import './menu.scss';
 import Header from '../header/header';
 import Logo from '../logo/logo';
 import '../myCart/myCart.scss';
+import '../header/header.scss';
 
 const Menu = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -36,34 +37,36 @@ const Menu = () => {
   ];
 
   return (
-    <div className="menu menu_header">
-      {isHeaderVisible && <Logo />}
-      <ul>
-        {navLinks.map(({ url, name, hasDropdown }) => (
-          <li
-            key={name}
-            onMouseEnter={() => setIsCategoryHovered(true)}
-            onMouseLeave={() => setIsCategoryHovered(false)}
-          >
-            {hasDropdown ? (
-              <>
+    <div className="menu">
+      <div className="menu_logo">{isHeaderVisible && <Logo />}</div>
+      <div>
+        <ul>
+          {navLinks.map(({ url, name, hasDropdown }) => (
+            <li
+              key={name}
+              onMouseEnter={() => setIsCategoryHovered(true)}
+              onMouseLeave={() => setIsCategoryHovered(false)}
+            >
+              {hasDropdown ? (
+                <>
+                  <Link to={url}>{name}</Link>
+                  {isCategoryHovered && (
+                    <div className="dropdown">
+                      <Link to="/m">Mens</Link>
+                      <Link to="/mens">Womenss</Link>
+                      <Link to="/subcategory1">Children</Link>
+                      <Link to="/subcategory1">Babies</Link>
+                    </div>
+                  )}
+                </>
+              ) : (
                 <Link to={url}>{name}</Link>
-                {isCategoryHovered && (
-                  <div className="dropdown">
-                    <Link to="/subcategory1">Mens</Link>
-                    <Link to="/subcategory1">Womenss</Link>
-                    <Link to="/subcategory1">Children</Link>
-                    <Link to="/subcategory1">Babies</Link>
-                  </div>
-                )}
-              </>
-            ) : (
-              <Link to={url}>{name}</Link>
-            )}
-          </li>
-        ))}
-      </ul>
-      {isHeaderVisible && <Header />}
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="menu_header">{isHeaderVisible && <Header />}</div>
     </div>
   );
 };
