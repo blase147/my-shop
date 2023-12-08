@@ -37,14 +37,13 @@ function Home() {
       <div className="luxury2">
         <div className="luxury2_image_cont">
           <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury2_image" />
-          <h2>Philip Patek</h2>
+          <h2 className="luxury2_label1">Philip Patek</h2>
         </div>
         <div className="luxury2_image_cont">
           <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury2_image" />
-          <h2>Philip Patek</h2>
+          <h2 className="luxury2_label2">Philip Patek</h2>
         </div>
       </div>
-      <h2>Customers Favourites</h2>
       <CustomerFavourites />
       <Testimonials />
       <OurBrands />

@@ -7,27 +7,6 @@
   width: 80%;
   gap: 60px;
   margin: auto;
-
-  .logo {
-    // display: flex;
-    // align-self: center;
-    // background-color: rgb(23, 0, 128);
-    // width: 13.3%;
-    // margin-left: auto;
-  }
-
-  .header {
-    // width: 20.3%;
-  }
-
-  .search {
-    // display: flex;
-    // align-self: center;
-    // justify-content: center;
-    // background-color: #720808;
-    // width: 60%;
-    // margin-left: auto; /* Move the entire div to the right */
-  }
 }
 
 .menu {
@@ -36,17 +15,16 @@
 }
 
 .luxury {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   align-items: center;
   margin: auto;
   width: 70%;
-  // background-color: red;
+  padding-bottom: 100px;
 
   .luxury_image {
-    // display: flex;
     width: 100%;
     height: 500px;
     background-color: rgb(0, 0, 0);
@@ -55,66 +33,45 @@
   }
 
   h2 {
-    position: relative;
-    top: -105px;
-    right: -7px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     border-radius: 10%;
     font-size: 1.2em;
-    width: 10%;
     padding: 15px;
   }
 }
 
 .luxury2 {
   display: flex;
-  // justify-content: center;
-  // align-content: center;
-  // align-items: center;
-  margin: auto;
-  // width: 100%;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .luxury2_image_cont {
-  // display: flex;
-  // justify-content: center;
-  // align-content: center;
-  // align-items: center;
-  // margin: auto;
-  // width: 100%;
-  // background-color: red;
-
-  .luxury2_image {
-    display: flex;
-    width: 100%;
-    // height: 500px;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
-  }
-
-  h2 {
-    position: relative;
-    top: -154px;
-    right: -434px;
-    background-color: #fff;
-    border-radius: 10%;
-    font-size: 1.2em;
-    width: 15%;
-    padding: 15px;
-    // text-align: center;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  // height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  // background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+.luxury2_image {
+  width: 100%;
+}
+
+.luxury2_label1,
+.luxury2_label2 {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -4,6 +4,7 @@ import './customerFavourites.scss';
 
 const CustomerFavourites = () => (
   <div className="customerFavourites_cont">
+    <h2>Customers Favourites</h2>
     <div className="customerFavourites">
       <div className="customerFavourites_card">
         <div className="discount_cont">

@@ -1,6 +1,9 @@
 .customerFavourites_cont {
   margin-bottom: 150px;
 
+  h2 {
+    margin-top: 80px;
+  }
   .customerFavourites {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +43,7 @@
 
   h4 {
     text-align: center;
-    margin-top: 50px;
+    // margin-top: 100px;
     padding: 30px;
 
     button {

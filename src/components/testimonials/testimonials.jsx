@@ -16,7 +16,7 @@ const Testimonials = () => {
     <div className="testimonials">
       <FaQuoteLeft size={60} style={{ color: 'grey' }} />
       <h2 className="testimonials_label">What customers say about us</h2>
-      <ImageSlider images={images} />
+      <ImageSlider images={images} className="testimonials" />
     </div>
   );
 };
