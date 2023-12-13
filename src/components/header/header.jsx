@@ -11,7 +11,7 @@ const Header = () => {
     { url: '/myAccount', icon: faUser },
     { url: '/myCart', icon: faShoppingCart },
     { url: '/myFavourites', icon: faHeart },
-  ].filter(Boolean);
+  ].filter((item) => item); // Use filter(item => item) instead of filter(Boolean)
 
   const [isCartModalOpen, setCartModalOpen] = useState(false);
 
@@ -28,14 +28,25 @@ const Header = () => {
       <ul>
         {HeaderItems.map(({ url, icon }) => (
           <li key={icon}>
-            {url === '/myCart' ? (
-              // If the link is for MyCart, open the modal on click
+            {url === '/myCart' && (
               <button type="button" onClick={openCartModal}>
-                <FontAwesomeIcon icon={icon} size="2x" aria-label="My Cart" style={{ color: '1px solid #0f0f0f' }} />
-                <p className="cart_no_home">2</p>
+                <FontAwesomeIcon icon={icon} size="2x" aria-label="My Cart" />
+                <p className="cart_no_home">13</p>
               </button>
-            ) : (
-              // Otherwise, use Link
+            )}
+
+            {url === '/myAccount' && (
+              <button type="button">
+                <FontAwesomeIcon icon={icon} size="2x" aria-label="Favourites" />
+              </button>
+            )}
+            {url === '/myFavourites' && (
+              <Link to={url}>
+                <FontAwesomeIcon icon={icon} size="2x" aria-label="Favourites" />
+                <p className="favourites_counter">17</p>
+              </Link>
+            )}
+            {url !== '/myCart' && url !== '/myFavourites' && url !== '/myAccount' && (
               <Link to={url}>
                 <FontAwesomeIcon icon={icon} size="2x" aria-label="My Cart" />
               </Link>

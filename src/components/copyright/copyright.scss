@@ -1,16 +1,17 @@
 .copyright {
   font-size: 12px;
-  margin-top: 0;
+  margin: 0;
   background-color: black;
+  width: 100%;
 
   .copyright_cont {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: auto;
+    // margin: auto;
     color: #999;
     font-size: 12px;
-    margin-left: 260px;
+    // margin-left: 260px;
 
     .copyright_text {
       display: flex;

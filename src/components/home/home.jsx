@@ -1,13 +1,13 @@
 import React from 'react';
 import Banner from '../banner/banner';
 import Footer from '../footer/footer';
-import CopyRight from '../copyright/copyright';
 import Header from '../header/header';
 import Category from '../category/category';
 import Search from '../search/search';
+import Newsletter from '../newsletterSub/newsletterSub';
+import CopyRight from '../copyright/copyright';
 import CustomerFavourites from '../customerFavourites/customerFavourites';
 import Testimonials from '../testimonials/testimonials';
-import Newsletter from '../newsletterSub/newsletterSub';
 import OurBrands from '../ourBrands/ourBrands';
 import ShopGallery from '../shopGallery/shopGallery';
 import FlashSale from '../flashSale/flashSale';
@@ -53,7 +53,6 @@ function Home() {
       <BlogNews />
       <Newsletter />
       <Footer />
-      <Menu />
       <CopyRight />
     </div>
   );

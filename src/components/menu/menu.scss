@@ -3,17 +3,23 @@
   background-color: #fff;
   position: -webkit-sticky;
   position: sticky;
-  top: 0; /* Set a value for the 'top' property to make it sticky at the top */
+  top: 0;
   z-index: 900;
   width: 100%;
-  margin-bottom: 20px;
+  // padding: 0;
+  // margin: 0;
+  // display: flex;
 
-  .menu_cont  {
+  .menu_cont {
     margin-right: 30px;
   }
 }
+
 .menu_cont a {
   margin-right: 30px;
+  padding-bottom: 35px;
+  // background-color: red;
+  margin-bottom: 0;
 }
 
 .dropdown {
@@ -21,43 +27,48 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 300px;
+  width: 400px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  text-align: left;
   box-shadow: 0 2px 4px rgba(5, 0, 0, 0.91);
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 30px;
+
   .dropdown_cont {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin: auto;
     border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      width: 100%;
+
+      &:hover {
+        background-color: rgb(42, 165, 69);
+      }
+    }
   }
+
   .featured_category {
-    width: 60%;
-    // background-color: red($color: #000000);
+    width: 50%;
     padding: 20px;
+    font-size: small;
+
     .featured_category_image {
       width: 100%;
     }
   }
 }
-.menu li:hover > .dropdown {
-  display: flex;
-  padding: 20px;
-}
-a {
-  padding: 10px;
-  text-decoration: none;
-  color: #333;
-  width: 100%;
 
-  &:hover {
-    background-color: rgb(42, 165, 69);
-  }
+.menu li:hover .dropdown {
+  display: flex;
+  margin-top: 35px;
 }
 
 .menu li {
@@ -65,23 +76,14 @@ a {
   list-style: none;
   display: inline-block;
 }
+
 .menu ul li:hover {
   background-color: brown;
+  // padding: 10px;
+  margin: 0;
 }
 
 .menu a {
-  display: block;
-  padding: 10px;
   text-decoration: none;
   color: #333;
-}
-
-.menu_header ul {
-  // padding: 0;
-  // margin: 0;
-}
-.menu_header ul li {
-  display: flex;
-  // margin: 0 5px 0 5px;
-  padding: 0;
 }
