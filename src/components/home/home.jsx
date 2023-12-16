@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../../Redux/Reducers/productSlice';
 import Banner from '../banner/banner';
 import Footer from '../footer/footer';
 import Header from '../header/header';
@@ -18,6 +20,53 @@ import './home.scss';
 import Services from '../services/services';
 
 function Home() {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.products);
+  const status = useSelector((state) => state.products.status);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchProducts());
+    }
+  }, [dispatch, status]);
+
+  const renderLuxuryImages1 = () => {
+    const luxuryImages = [];
+
+    for (let i = 0; i < products.length; i += 1) {
+      const product = products[i];
+
+      if (product.price > 500) {
+        luxuryImages.push(
+          <div key={product.id}>
+            <img src={product.product_image_url} alt={product.name} className="luxury_image" />
+            <h2>{product.name}</h2>
+          </div>,
+        );
+      }
+    }
+
+    return luxuryImages;
+  };
+  const renderLuxuryImages2 = () => {
+    const luxuryImages = [];
+
+    for (let i = 0; i < products.length; i += 1) {
+      const product = products[i];
+
+      if (product.price <= 500) {
+        luxuryImages.push(
+          <div key={product.id}>
+            <img src={product.product_image_url} alt={product.name} className="luxury_image" />
+            <h2>{product.name}</h2>
+          </div>,
+        );
+      }
+    }
+
+    return luxuryImages;
+  };
+
   return (
     <div className="Home">
       <div className="search_header">
@@ -29,21 +78,9 @@ function Home() {
       <Banner />
       <Category />
       <Services />
-      <div className="luxury">
-        <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury_image" />
-        <h2>Philip Patek</h2>
-      </div>
+      <div className="luxury">{renderLuxuryImages1()}</div>
       <FlashSale />
-      <div className="luxury2">
-        <div className="luxury2_image_cont">
-          <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury2_image" />
-          <h2 className="luxury2_label1">Philip Patek</h2>
-        </div>
-        <div className="luxury2_image_cont">
-          <img src="https://www.thecoldwire.com/wp-content/uploads/2023/01/storage-black-leather-box-with-collection-of-men-wrist-watches.jpeg" alt="luxury watch" className="luxury2_image" />
-          <h2 className="luxury2_label2">Philip Patek</h2>
-        </div>
-      </div>
+      <div className="luxury2">{renderLuxuryImages2()}</div>
       <CustomerFavourites />
       <Testimonials />
       <OurBrands />

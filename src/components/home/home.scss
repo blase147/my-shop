@@ -18,13 +18,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
   width: 70%;
   padding-bottom: 100px;
+  // background-color: blue;
+
 
   .luxury_image {
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: rgb(0, 0, 0);
     border-radius: 5%;
     padding: 10px;
@@ -45,19 +46,26 @@
 .luxury2 {
   display: flex;
   justify-content: center;
-  margin: 0;
+  // margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px;
+  // padding: 10px;
+  background-color: red;
 }
 
 .luxury2_image_cont {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  width: 50%;
+  // margin: auto;
+  align-items: center;
+  background-color: green;
 }
 
 .luxury2_image {
+  // max-width: 1200px;
   width: 100%;
 }
 
