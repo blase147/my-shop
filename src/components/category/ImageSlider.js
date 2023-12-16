@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './category.scss';
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ products }) => {
+  const [sliderKey, setSliderKey] = useState(0);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    key: sliderKey,
   };
+
+  useEffect(() => {
+    setSliderKey((prevKey) => prevKey + 1);
+  }, [products]);
 
   return (
     <div className="full-screen-slider">
@@ -22,12 +29,13 @@ const ImageSlider = ({ images }) => {
         speed={settings.speed}
         slidesToShow={settings.slidesToShow}
         slidesToScroll={settings.slidesToScroll}
+        key={settings.key}
       >
-        {images.map((image) => (
+        {products.map((image) => (
           <div key={image.id}>
-            <img src={image.image} alt={image.alt} className="image_map" />
+            <img src={image.product_image_url} alt={image.alt} className="image_map" />
             <h3>{image.name}</h3>
-            <p>{image.stock}</p>
+            <p>{image.inventory}</p>
           </div>
         ))}
       </Slider>
@@ -36,13 +44,13 @@ const ImageSlider = ({ images }) => {
 };
 
 ImageSlider.propTypes = {
-  images: PropTypes.arrayOf(
+  products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
+      product_image_url: PropTypes.string.isRequired,
       alt: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      stock: PropTypes.string.isRequired,
+      inventory: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

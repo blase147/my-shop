@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './banner.scss';
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ products }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -29,13 +29,13 @@ const ImageSlider = ({ images }) => {
         autoplaySpeed={settings.autoplaySpeed}
         cssEase={settings.cssEase}
       >
-        {images.map((image) => (
+        {products.map((image) => (
           <div key={image.id}>
-            <img src={image.image} alt={image.alt} />
+            <img src={image.product_image_url} alt={image.product_image} />
             <div className="image_desc">
-              <h3>{image.major_desc}</h3>
-              <p>{image.minor_desc}</p>
-              <div className="shopbtn">{image.button}</div>
+              <h3>{image.name}</h3>
+              <p>{image.description}</p>
+              <button type="button" className="shopbtn">Shop Now</button>
             </div>
           </div>
         ))}
@@ -45,7 +45,7 @@ const ImageSlider = ({ images }) => {
 };
 
 ImageSlider.propTypes = {
-  images: PropTypes.arrayOf(
+  products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,

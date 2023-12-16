@@ -29,9 +29,11 @@
     .shopGallery_card {
       width: 25%;
       margin-bottom: 5px;
+      overflow: hidden;
 
       .shopGallery_image {
-        width: 94%; /* Adjusted width */
+        width: 100%; 
+        max-height: 30vh;
         padding: 10px;
         background-color: rgb(14, 0, 0);
       }
