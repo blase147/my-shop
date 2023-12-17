@@ -1,78 +1,89 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import './myCart.scss';
-import { FaTrash } from 'react-icons/fa';
+// import { FaTrash } from 'react-icons/fa';
 import { IoCartOutline } from 'react-icons/io5';
+// import CartItem from './cartItem';
 
-const MyCart = ({ onClose }) => (
-  <div className="myCart">
-    <div className="title_closebtn">
-      <h2>
-        <div className="cart_no">
-          <p>2</p>
+const MyCart = ({ onClose }) => {
+  const cart = useSelector((state) => state.cart);
+  // const dispatch = useDispatch();
+
+  const subtotal = Array.isArray(cart)
+    ? cart.reduce((total, item) => total + item.quantity * parseFloat(item.price), 0)
+    : 0;
+
+  return (
+    <div className="myCart">
+      <div className="title_closebtn">
+        <h2>
+          <div className="cart_no">
+            <p>{cart.length}</p>
+          </div>
+          <IoCartOutline size={30} />
+          SHOPPING CART
+        </h2>
+        <button type="button" aria-hidden="true" onClick={onClose}>
+          X
+        </button>
+      </div>
+      <div className="myCart_cont">
+        <div className="myCart_card">
+          {Array.isArray(cart) && cart?.map((item) => (
+            <div key={item.id} className="myCart_item">
+              <div className="myCart_img_cont">
+                <img
+                  src={item.product_image_url}
+                  alt={item.name}
+                  width="200"
+                  height="200"
+                  className="cart_image"
+                />
+              </div>
+              <div className="cart_desc">
+                <h3 className="cart_title">{item.name}</h3>
+                <p className="cart_desc">{item.description}</p>
+                <p className="cart_price">
+                  $
+                  {item.price}
+                </p>
+                {/* <div className="myCart_addmorebtn">
+                  <button type="button" onClick={() => dispatch(decrementQuantity(item.id))}>
+                    -
+                  </button>
+                  <p>{item.quantity}</p>
+                  <button type="button" onClick={() => dispatch(incrementQuantity(item.id))}>
+                    +
+                  </button>
+                  <FaTrash
+                    className="trashbtn"
+                    onClick={() => dispatch(removeItem(item.product))}
+                  />
+                </div> */}
+              </div>
+            </div>
+          ))}
         </div>
-        <IoCartOutline size={30} />
-        SHOPPING CART
-      </h2>
-      <button type="button" aria-hidden="true" onClick={onClose}>
-        X
-      </button>
-    </div>
-    <div className="myCart_cont">
-      <div className="myCart_card">
-        <div className="myCart_img_cont">
-          <img
-            src="https://similux-vinovatheme.myshopify.com/cdn/shop/products/2_67f158ea-0232-4b8e-8f43-299dcb368639_360x.jpg?v=1658895275"
-            alt="Empty Cart"
-            width="200"
-            height="200"
-            className="cart_image"
-          />
-        </div>
-        <div className="cart_desc">
-          <h3 className="cart_title">Rolex bangle</h3>
-          <p className="cart_desc">Rolex bangle</p>
-          <p className="cart_price">$1100</p>
-          <div className="myCart_addmorebtn">
-            <button type="button">-</button>
-            1
-            <button type="button">
-              +
-            </button>
-            <FaTrash className="trashbtn" />
+      </div>
+      <div className="cart_summary_checkout">
+        <div className="cart_total">
+          <div className="cart_total_cont">
+            <div className="cart_total_desc">
+              <h3>Subtotal</h3>
+              <h3>
+                $
+                {subtotal.toFixed(2)}
+              </h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div className="cart_summary_checkout">
-      <div className="cart_total">
-        <div className="cart_total_cont">
-          <div className="cart_total_desc">
-            <h3>Subtotal</h3>
-            <h3>$1400</h3>
-          </div>
-          <div className="cart_total_desc">
-            <h3>Shipping</h3>
-            <h3>$10</h3>
-          </div>
-        </div>
-      </div>
-      <div className="view_cart_btn">
-        <button type="button">VIEW CART</button>
-      </div>
-      <div className="checkout_btn">
-        <button type="button">CHECKOUT</button>
-      </div>
-      <label htmlFor="termsCheckbox" className="termsCheckbox">
-        <input type="checkbox" id="termsCheckbox" className="checkbox" />
-        I agree to the Terms & Conditions
-      </label>
-    </div>
-  </div>
-);
+  );
+};
 
 MyCart.propTypes = {
-  onClose: PropTypes.func.isRequired, // onClose should be a function and is required
+  onClose: PropTypes.func.isRequired,
 };
 
 export default MyCart;

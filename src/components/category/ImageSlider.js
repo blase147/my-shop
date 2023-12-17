@@ -33,9 +33,16 @@ const ImageSlider = ({ products }) => {
       >
         {products.map((image) => (
           <div key={image.id}>
-            <img src={image.product_image_url} alt={image.alt} className="image_map" />
+            <img
+              src={image.product_image_url}
+              alt={image.alt}
+              className="image_map"
+            />
             <h3>{image.name}</h3>
-            <p>{image.inventory}</p>
+            <p>
+              {image.inventory}
+              Products available
+            </p>
           </div>
         ))}
       </Slider>

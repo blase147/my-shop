@@ -1,12 +1,25 @@
 .full-screen-slider {
   width: 80%;
   margin-left: auto;
+
+  & h3 {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
+  p {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
 }
 
 .full-screen-slider .slick-slide img {
   width: 100%;
-  max-width: 100%;
-  max-height: 20vh;
+  max-width: 25vw;
+  max-height: 40vh;
   border-radius: 15px;
   padding: 10px;
   margin: 0;
@@ -31,13 +44,6 @@
 
 .full-screen-slider .slick-next {
   margin-right: 10px;
-}
-
-.category_label {
-  width: 85%;
-  text-align: left;
-  margin-left: auto;
-  padding: 0;
 }
 
 .category {

@@ -2,6 +2,20 @@
 .flash_sale_slider {
   width: 85%;
   margin-left: auto;
+
+  & h3 {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
+
+  & p {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
 }
 
 .flash_sale_slider .slick-slide img {

@@ -1,12 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './luxury1.scss';
 
 const Luxury1 = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
   const status = useSelector((state) => state.products.status);
+  const [hover, setHover] = useState(false);
+
+  const handleOnHover = () => {
+    setHover(true);
+  };
+
+  const handleOnBlur = () => {
+    setHover(false);
+  };
 
   useEffect(() => {
     if (status === 'idle') {
@@ -19,15 +29,33 @@ const Luxury1 = () => {
     for (let i = 0; i < products.length; i += 1) {
       const product = products[i];
 
-      if (product.price < 500) {
+      if (product.price < 20000) {
         luxuryImages.push(
-          <div key={product.id} className="luxury_images_card1">
+          <div
+            key={product.id}
+            onMouseOver={handleOnHover}
+            onFocus={handleOnHover}
+            onMouseOut={handleOnBlur}
+            onBlur={handleOnBlur}
+            className={`luxury_images_card1 ${hover ? 'showAddToCart' : ''}`}
+          >
             <img
               src={product.product_image_url}
               alt={product.name}
               className="luxury_image"
             />
-            <h2>{product.name}</h2>
+            <div className="name_cart">
+              <h2>{product.name}</h2>
+              {hover && (
+                <button
+                  type="button"
+                  onClick={() => dispatch(addToCart(product))}
+                >
+                  Add to Cart
+                </button>
+              )}
+            </div>
+            ,
           </div>,
         );
       }

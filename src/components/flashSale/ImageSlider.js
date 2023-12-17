@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './flashSale.scss';
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ products }) => {
+  const [hover, setHover] = useState(false);
+
+  const handleOnHover = () => {
+    setHover(true);
+  };
+
+  const handleOnBlur = () => {
+    setHover(false);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -23,11 +33,26 @@ const ImageSlider = ({ images }) => {
         slidesToShow={settings.slidesToShow}
         slidesToScroll={settings.slidesToScroll}
       >
-        {images.map((image) => (
-          <div key={image.id}>
-            <img src={image.image} alt={image.alt} className="image_map" />
-            <h3>{image.name}</h3>
-            <p>{image.stock}</p>
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="product-slide"
+            onMouseEnter={handleOnHover}
+            onMouseLeave={handleOnBlur}
+          >
+            <img
+              src={product.product_image_url}
+              alt={product.alt}
+              className={`image_map ${hover ? 'showAddToCart' : ''}`}
+            />
+            <div>
+              {hover && <button type="button">Add to cart</button>}
+            </div>
+            <h3>{product.name}</h3>
+            <p>
+              $
+              {product.price}
+            </p>
           </div>
         ))}
       </Slider>
@@ -36,13 +61,13 @@ const ImageSlider = ({ images }) => {
 };
 
 ImageSlider.propTypes = {
-  images: PropTypes.arrayOf(
+  products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
+      product_image_url: PropTypes.string.isRequired,
       alt: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      stock: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

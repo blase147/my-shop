@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
@@ -7,11 +8,30 @@ import MyCart from '../myCart/myCart';
 import '../myCart/myCart.scss';
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart);
+
+  const getTotalQuantity = () => {
+    let total = 0;
+    if (Array.isArray(cart.cart)) {
+      cart.cart.forEach((item) => {
+        total += item.quantity;
+      });
+    }
+    return total;
+  };
+    // const getTotalAmount = () => {
+  //   let total = 0
+  //   cart.forEach(item => {
+  //     total += (item.quantity * item.price)
+  //   })
+  //   return total
+  // }
+
   const HeaderItems = [
     { url: '/myAccount', icon: faUser },
     { url: '/myCart', icon: faShoppingCart },
     { url: '/myFavourites', icon: faHeart },
-  ].filter((item) => item); // Use filter(item => item) instead of filter(Boolean)
+  ].filter((item) => item); // Use filter(item => item.url) instead of filter(Boolean)
 
   const [isCartModalOpen, setCartModalOpen] = useState(false);
 
@@ -31,7 +51,9 @@ const Header = () => {
             {url === '/myCart' && (
               <button type="button" onClick={openCartModal}>
                 <FontAwesomeIcon icon={icon} size="2x" aria-label="My Cart" />
-                <p className="cart_no_home">13</p>
+                <p className="cart_no_home">
+                  {getTotalQuantity() || 0}
+                </p>
               </button>
             )}
 

@@ -23,7 +23,7 @@ const CustomerFavourites = () => {
           <div className="customerFavourites_card" key={product.id}>
             <div className="discount_cont">
               <FaBolt size={15} style={{ color: 'black' }} />
-              -20%
+              {product.discount}
             </div>
             <img
               src={product.product_image_url}

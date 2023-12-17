@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './products.scss';
 
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
   const status = useSelector((state) => state.products.status);
-
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchProducts());
@@ -22,28 +22,33 @@ const Products = () => {
         {status === 'loading' && <div>Loading...</div>}
         {status === 'succeeded' && (
           <div className="products_cont">
-            {products.map((item) => (
-              <div className="products_card" key={item.id}>
-                <div className="product_image">
-                  {item.product_image_url && (
-                    <img
-                      className="product_image"
-                      src={item.product_image_url}
-                      // style={{ width: '100%', height: '400px' }}
-                      alt={item.name}
-                      onError={(e) => console.error('Image failed to load', e)}
-                    />
-                  )}
+            {products.map((product) => (
+              <>
+                <div className="products_card" key={product.id}>
+                  <div className="product_image">
+                    {product.product_image_url && (
+                      <img
+                        className="product_image"
+                        src={product.product_image_url}
+                        // style={{ width: '100%', height: '400px' }}
+                        alt={product.name}
+                        onError={(e) => console.error('Image failed to load', e)}
+                      />
+                    )}
+                  </div>
+                  <h5 className="name">
+                    <Link to={`/${product.id}`}>{product.name}</Link>
+                  </h5>
+                  <p className="desc">{product.description}</p>
+                  <p className="price">{product.price}</p>
+                  <p className="cat">{product.category}</p>
+                  <p className="discount">{product.discount}</p>
+                  <p className="produc_type">{product.product_type}</p>
                 </div>
-                <h5 className="name">
-                  <Link to={`/${item.id}`}>{item.name}</Link>
-                </h5>
-                <p className="desc">{item.description}</p>
-                <p className="price">{item.price}</p>
-                <p className="cat">{item.category}</p>
-                <p className="discount">{item.discount}</p>
-                <p className="productype">{item.product_type}</p>
-              </div>
+                <button type="button" onClick={() => dispatch(addToCart(product))}>
+                  Add to Cart
+                </button>
+              </>
             ))}
           </div>
         )}

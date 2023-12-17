@@ -19,7 +19,7 @@ const Luxury2 = () => {
     for (let i = 0; i < products.length; i += 1) {
       const product = products[i];
 
-      if (product.price > 500) {
+      if (product.price > 20000) {
         luxuryImages.push(
           <div key={product.id} className="luxury_images_card2">
             <img
