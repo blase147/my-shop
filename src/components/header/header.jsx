@@ -19,13 +19,6 @@ const Header = () => {
     }
     return total;
   };
-    // const getTotalAmount = () => {
-  //   let total = 0
-  //   cart.forEach(item => {
-  //     total += (item.quantity * item.price)
-  //   })
-  //   return total
-  // }
 
   const HeaderItems = [
     { url: '/myAccount', icon: faUser },

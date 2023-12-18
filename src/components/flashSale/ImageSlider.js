@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './flashSale.scss';
+import Item from '../myCart/item';
 
 const ImageSlider = ({ products }) => {
   const [hover, setHover] = useState(false);
@@ -34,26 +35,27 @@ const ImageSlider = ({ products }) => {
         slidesToScroll={settings.slidesToScroll}
       >
         {products.map((product) => (
-          <div
-            key={product.id}
-            className="product-slide"
-            onMouseEnter={handleOnHover}
-            onMouseLeave={handleOnBlur}
-          >
-            <img
-              src={product.product_image_url}
-              alt={product.alt}
-              className={`image_map ${hover ? 'showAddToCart' : ''}`}
-            />
-            <div>
-              {hover && <button type="button">Add to cart</button>}
+          <>
+            <div
+              key={product.id}
+              className="product-slide"
+              onMouseEnter={handleOnHover}
+              onMouseLeave={handleOnBlur}
+            >
+              <img
+                src={product.product_image_url}
+                alt={product.alt}
+                className={`image_map ${hover ? 'showAddToCart' : ''}`}
+              />
+              <div>{hover && <button type="button">Add to cart</button>}</div>
+              <h3>{product.name}</h3>
+              <p>
+                $
+                {product.price}
+              </p>
             </div>
-            <h3>{product.name}</h3>
-            <p>
-              $
-              {product.price}
-            </p>
-          </div>
+            <Item />
+          </>
         ))}
       </Slider>
     </div>

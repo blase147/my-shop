@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './luxury1.scss';
+// import Item from '../myCart/item';
 
 const Luxury1 = () => {
   const dispatch = useDispatch();
@@ -47,12 +48,15 @@ const Luxury1 = () => {
             <div className="name_cart">
               <h2>{product.name}</h2>
               {hover && (
-                <button
-                  type="button"
-                  onClick={() => dispatch(addToCart(product))}
-                >
-                  Add to Cart
-                </button>
+                <>
+                  <button
+                    type="button"
+                    onClick={() => dispatch(addToCart(product))}
+                  >
+                    Add to Carttt
+                  </button>
+                  {/* <Item /> */}
+                </>
               )}
             </div>
             ,

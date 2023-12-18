@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './luxury2.scss';
 
 const Luxury2 = () => {
@@ -28,6 +29,12 @@ const Luxury2 = () => {
               className="luxury_image2"
             />
             <h2>{product.name}</h2>
+            <button
+              type="button"
+              onClick={() => dispatch(addToCart(product))}
+            >
+              Add to Carttt
+            </button>
           </div>,
         );
       }

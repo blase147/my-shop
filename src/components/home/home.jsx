@@ -18,6 +18,7 @@ import './home.scss';
 import Services from '../services/services';
 import Luxury1 from '../luxury1/luxury1';
 import Luxury2 from '../luxury2/luxury2';
+import Item from '../myCart/item';
 
 function Home() {
   return (
@@ -37,6 +38,7 @@ function Home() {
       <CustomerFavourites />
       <Testimonials />
       <OurBrands />
+      <Item />
       <hr />
       <ShopGallery />
       <hr />
