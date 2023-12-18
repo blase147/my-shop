@@ -36,20 +36,18 @@ const Products = () => {
                       <img
                         className="product_image"
                         src={product.product_image_url}
-                        // style={{ width: '100%', height: '400px' }}
                         alt={product.name}
                         onError={(e) => console.error('Image failed to load', e)}
                       />
                     )}
                   </div>
-                  <h5 className="name">
+                  <h3 className="name">
                     <Link to={`/${product.id}`}>{product.name}</Link>
-                  </h5>
-                  <p className="desc">{product.description}</p>
-                  <p className="price">{product.price}</p>
-                  <p className="cat">{product.category}</p>
-                  <p className="discount">{product.discount}</p>
-                  <p className="produc_type">{product.product_type}</p>
+                  </h3>
+                  <p className="price">
+                    $
+                    {product.price}
+                  </p>
                   <button
                     type="button"
                     onClick={() => dispatch(addToCart(product))}
