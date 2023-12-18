@@ -77,15 +77,17 @@
 
   .myCart_cont {
     display: flex;
-    overflow-y: auto;
-
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling */
+    // background-color: rgb(17, 189, 25);
+    padding: 10px; /* Add some padding for better appearance */
+    height: 80vh;
     .myCart_card {
       display: flex;
+      flex-direction: column;
       width: 100%;
-      justify-content: center;
-      padding: 12px;
-      margin-bottom: 20px;
-      scroll-behavior: smooth;
+      margin: 12px;
+      padding-bottom: 80px;
 
       .myCart_img_cont {
         width: 50%;
@@ -152,14 +154,14 @@
 
     .cart_total {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       margin-bottom: 1rem;
-      padding: 15px;
+      // padding: 15px;
 
       .cart_total_cont {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
         width: 100%;
 
         .cart_total_desc {

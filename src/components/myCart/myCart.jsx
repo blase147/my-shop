@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { IoCartOutline } from 'react-icons/io5';
 import CartItem from './cartItem';
 import Total from './total';
+import './myCart.scss';
 
 const MyCart = ({ onClose }) => {
   const cart = useSelector((state) => state.cart.cart);
@@ -46,18 +47,14 @@ const MyCart = ({ onClose }) => {
               quantity={item.quantity}
             />
           ))}
-          <div className="cart_summary_checkout">
-            <div className="cart_total">
-              <div className="cart_total_cont">
-                <div className="cart_total_desc">
-                  <h3>Subtotal</h3>
-                  <h3>
-                    $
-                    <Total />
-                  </h3>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div className="cart_summary_checkout">
+        <div className="cart_total">
+          <div className="cart_total_cont">
+            <p>
+              <Total />
+            </p>
           </div>
         </div>
       </div>

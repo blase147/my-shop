@@ -4,6 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './products.scss';
+import Header from '../header/header';
+import Menu from '../menu/menu';
+import Newsletter from '../newsletterSub/newsletterSub';
+import CopyRight from '../copyright/copyright';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -17,6 +21,8 @@ const Products = () => {
 
   return (
     <div className="products">
+      <Header />
+      <Menu />
       <h2>Products</h2>
       <div>
         {status === 'loading' && <div>Loading...</div>}
@@ -44,15 +50,21 @@ const Products = () => {
                   <p className="cat">{product.category}</p>
                   <p className="discount">{product.discount}</p>
                   <p className="produc_type">{product.product_type}</p>
+                  <button
+                    type="button"
+                    onClick={() => dispatch(addToCart(product))}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
-                <button type="button" onClick={() => dispatch(addToCart(product))}>
-                  Add to Cart
-                </button>
               </>
             ))}
           </div>
         )}
       </div>
+      <Newsletter />
+      <footer />
+      <CopyRight />
     </div>
   );
 };
