@@ -53,7 +53,7 @@ const Luxury1 = () => {
                     type="button"
                     onClick={() => dispatch(addToCart(product))}
                   >
-                    Add to Carttt
+                    Add to Cart
                   </button>
                   {/* <Item /> */}
                 </>

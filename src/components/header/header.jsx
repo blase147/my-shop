@@ -9,11 +9,22 @@ import '../myCart/myCart.scss';
 
 const Header = () => {
   const cart = useSelector((state) => state.cart);
+  const fav = useSelector((state) => state.fav.fav);
 
   const getTotalQuantity = () => {
     let total = 0;
     if (Array.isArray(cart.cart)) {
       cart.cart.forEach((item) => {
+        total += item.quantity;
+      });
+    }
+    return total;
+  };
+
+  const getTotalFav = () => {
+    let total = 0;
+    if (Array.isArray(fav)) {
+      fav.forEach((item) => {
         total += item.quantity;
       });
     }
@@ -58,7 +69,9 @@ const Header = () => {
             {url === '/myFavourites' && (
               <Link to={url}>
                 <FontAwesomeIcon icon={icon} size="2x" aria-label="Favourites" />
-                <p className="favourites_counter">17</p>
+                <p className="favourites_counter">
+                  {getTotalFav() || 0}
+                </p>
               </Link>
             )}
             {url !== '/myCart' && url !== '/myFavourites' && url !== '/myAccount' && (

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
+import { addToFav } from '../../Redux/Reducers/favSlice';
 import './products.scss';
 import Header from '../header/header';
 import Menu from '../menu/menu';
@@ -53,6 +54,12 @@ const Products = () => {
                     onClick={() => dispatch(addToCart(product))}
                   >
                     Add to Cart
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => dispatch(addToFav(product))}
+                  >
+                    Add to Favourites
                   </button>
                 </div>
               </>

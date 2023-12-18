@@ -1,25 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const cartSlice = createSlice({
-  name: 'cart',
+const favSlice = createSlice({
+  name: 'fav',
   initialState: {
     products: [],
-    cart: [],
+    fav: [],
   },
   reducers: {
-    addToCart: (state, action) => {
+    addToFav: (state, action) => {
       const { id } = action.payload;
-      const itemInCart = state.cart.find((item) => item.id === id);
+      const itemInFav = state.fav.find((item) => item.id === id);
 
-      if (itemInCart) {
-        itemInCart.quantity += 1;
+      if (itemInFav) {
+        itemInFav.quantity += 1;
       } else {
-        state.cart.push({ ...action.payload, quantity: 1 });
+        state.fav.push({ ...action.payload, quantity: 1 });
       }
     },
     incrementQuantity: (state, action) => {
       const { id } = action.payload;
-      const item = state.cart.find((item) => item.id === id);
+      const item = state.fav.find((item) => item.id === id);
 
       if (item) {
         item.quantity += 1;
@@ -27,7 +27,7 @@ const cartSlice = createSlice({
     },
     decrementQuantity: (state, action) => {
       const { id } = action.payload;
-      const item = state.cart.find((item) => item.id === id);
+      const item = state.fav.find((item) => item.id === id);
 
       if (item && item.quantity > 1) {
         item.quantity -= 1;
@@ -35,19 +35,19 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       const { id } = action.payload;
-      const updatedCart = state.cart.filter((item) => item.id !== id);
+      const updatedFav = state.fav.filter((item) => item.id !== id);
       return {
         ...state,
-        cart: updatedCart,
+        fav: updatedFav,
       };
     },
   },
 });
 
-export default cartSlice.reducer;
+export default favSlice.reducer;
 export const {
-  addToCart,
+  addToFav,
   incrementQuantity,
   decrementQuantity,
   removeItem,
-} = cartSlice.actions;
+} = favSlice.actions;
