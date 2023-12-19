@@ -1,42 +1,35 @@
 .myfav {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // background-color: red;
-  width: 100%;
-  margin: auto;
-  padding-top: 100px;
+  // box-sizing: border-box;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // width: 100%;
+  // margin: auto;
+  // padding-top: 100px;
+
   .myfav_cont {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    // display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
+    // width: 100%;
+    // // margin: auto;
     text-align: left;
-    .myfav_card {
+    // background-color: red;
 
-      & div {
-        margin-left: 10px;
-      }
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      align-items: left;
-      align-content: flex-start;
-      width: 25%;
-      padding: 10px;
-      // background-color: blue;
-      border: 1px solid #e5e5e5;
-      border-radius: 15px;
-      margin: 20px;
-      .fav_image {
-        padding: 10px;
-        width: auto;
-        border-radius: 15px;
+      .favItem__image {
+        // padding: 10px;
+        // width: 100%;
+        // border-radius: 15px;
+        // padding: 20px;
+        // background-color: green;
       }
     }
+    .myfav_addmorebtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
   }
-}

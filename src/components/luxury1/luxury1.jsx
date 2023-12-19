@@ -55,7 +55,6 @@ const Luxury1 = () => {
                   >
                     Add to Cart
                   </button>
-                  {/* <Item /> */}
                 </>
               )}
             </div>
