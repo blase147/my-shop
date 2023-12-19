@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { IoCartOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 import CartItem from './cartItem';
 import Total from './total';
 import './myCart.scss';
@@ -56,6 +57,12 @@ const MyCart = ({ onClose }) => {
               <Total />
             </p>
           </div>
+        </div>
+        <button type="button" className="viewCart"><Link to="/viewCart">View Cart</Link></button>
+        <button type="button" className="checkout_btn">Checkout</button>
+        <div className="termsCheckbox">
+          <input type="checkbox" className="checkbox" />
+          Terms and Conditions
         </div>
       </div>
     </div>

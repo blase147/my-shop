@@ -9,6 +9,9 @@ import Header from '../header/header';
 import Menu from '../menu/menu';
 import Newsletter from '../newsletterSub/newsletterSub';
 import CopyRight from '../copyright/copyright';
+import Logo from '../logo/logo';
+import Search from '../search/search';
+import Footer from '../footer/footer';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -22,8 +25,13 @@ const Products = () => {
 
   return (
     <div className="products">
-      <Header />
+      <div className="search_header">
+        <Logo />
+        <Search />
+        <Header />
+      </div>
       <Menu />
+
       <h2>Products</h2>
       <div>
         {status === 'loading' && <div>Loading...</div>}
@@ -67,7 +75,7 @@ const Products = () => {
         )}
       </div>
       <Newsletter />
-      <footer />
+      <Footer />
       <CopyRight />
     </div>
   );

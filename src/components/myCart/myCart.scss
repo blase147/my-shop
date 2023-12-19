@@ -10,29 +10,29 @@
   right: 0;
   z-index: 1000;
 
-  .checkout_btn {
-    button {
-      background-color: blue;
-      color: white;
-      width: 98%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  }
+  // .checkout_btn {
+  //   button {
+  //     background-color: blue;
+  //     color: white;
+  //     width: 98%;
+  //     padding: 10px;
+  //     margin-bottom: 10px;
+  //     border-radius: 5px;
+  //     cursor: pointer;
+  //   }
+  // }
 
-  .view_cart_btn {
-    button {
-      background-color: grey;
-      color: white;
-      width: 98%;
-      padding: 10px;
-      margin: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  }
+  // .view_cart_btn {
+  //   button {
+  //     background-color: grey;
+  //     color: white;
+  //     width: 98%;
+  //     padding: 10px;
+  //     margin: 5px;
+  //     border-radius: 5px;
+  //     cursor: pointer;
+  //   }
+  // }
 
   .title_closebtn {
     display: flex;
@@ -81,7 +81,7 @@
     overflow-y: auto; /* Enable vertical scrolling */
     // background-color: rgb(17, 189, 25);
     padding: 10px; /* Add some padding for better appearance */
-    height: 80vh;
+    height: 60vh;
     .myCart_card {
       display: flex;
       flex-direction: column;
@@ -147,11 +147,15 @@
   .cart_summary_checkout {
     display: flex;
     flex-direction: column;
+    // justify-items: center;
+    // align-content: center;
+    // align-items: center;
     width: 100%;
+    margin: 0;
     background-color: rgb(255, 255, 255);
-    position: absolute;
-    bottom: 0;
-
+    // position: absolute;
+    // bottom: 0;
+    padding: 0;
     .cart_total {
       display: flex;
       // justify-content: space-between;
@@ -163,15 +167,29 @@
         flex-direction: column;
         // justify-content: space-between;
         width: 100%;
-
-        .cart_total_desc {
-          display: flex;
-          justify-content: space-between;
-          border-bottom: 1px solid grey;
-        }
       }
     }
 
+    & button:nth-child(2){
+      display: flex;
+      justify-content: center;
+      background-color: blue;
+      color: white;
+      width: 98%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    & button:nth-child(3) {
+      background-color: grey;
+      color: white;
+      width: 98%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
     .termsCheckbox {
       display: flex;
       margin-bottom: 1rem;

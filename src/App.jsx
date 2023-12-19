@@ -6,6 +6,7 @@ import MyCart from './components/myCart/myCart';
 import Products from './components/products/products';
 import MyFavourites from './components/myFavourites/myFavourites';
 import Home from './components/home/home';
+import ViewCart from './components/myCart/viewCart';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/myCart" element={<MyCart />} />
+          <Route path="/viewCart" element={<ViewCart />} />
           <Route path="/products" element={<Products />} />
           <Route path="/myFavourites" element={<MyFavourites />} />
         </Routes>
