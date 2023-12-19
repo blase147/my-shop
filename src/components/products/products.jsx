@@ -38,7 +38,6 @@ const Products = () => {
                         className="product_image"
                         src={product.product_image_url}
                         alt={product.name}
-                        onError={(e) => console.error('Image failed to load', e)}
                       />
                     )}
                   </div>
