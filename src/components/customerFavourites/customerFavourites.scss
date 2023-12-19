@@ -11,7 +11,7 @@
     width: 80%;
     margin: auto;
     gap: 30px;
-    justify-content: center; /* Center items horizontally */
+    justify-content: center;
 
     .customerFavourites_card {
       display: flex;
@@ -23,13 +23,11 @@
       & h2 {
         padding: 0;
         margin: 0;
-        // color: red;
-      }    
-      
+      }
+
       & h3 {
         padding: 0;
         margin: 0;
-        // color: red;
       }
 
       .discount_cont {
@@ -40,7 +38,7 @@
         border-radius: 15%;
         color: #000;
         font-size: 0.8em;
-        padding: 5px 10px; /* Adjust as needed */
+        padding: 5px 10px;
         position: relative;
         top: 45px;
         left: 10px;
@@ -60,7 +58,6 @@
 
   h4 {
     text-align: center;
-    // margin-top: 100px;
     padding: 30px;
 
     button {
