@@ -30,7 +30,7 @@ const Menu = () => {
 
   const navLinks = [
     { url: '/', name: 'Home' },
-    { url: '/#', name: 'Category', hasDropdown: true },
+    { url: '/category', name: 'Category', hasDropdown: true },
     { url: '/contactUs', name: 'Contact Us' },
     { url: '/products', name: 'Products', hasDropdown: true },
     { url: '/blog', name: 'Blog' },

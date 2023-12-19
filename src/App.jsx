@@ -8,6 +8,7 @@ import MyFavourites from './components/myFavourites/myFavourites';
 import Home from './components/home/home';
 import ViewCart from './components/myCart/viewCart';
 import './App.css';
+import CheckOut from './components/myCart/checkOut';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/myCart" element={<MyCart />} />
           <Route path="/viewCart" element={<ViewCart />} />
+          <Route path="/checkOut" element={<CheckOut />} />
           <Route path="/products" element={<Products />} />
           <Route path="/myFavourites" element={<MyFavourites />} />
         </Routes>

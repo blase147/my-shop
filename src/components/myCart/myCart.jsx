@@ -37,17 +37,16 @@ const MyCart = ({ onClose }) => {
       <div className="myCart_cont">
         <div className="myCart_card">
           {Array.isArray(cart)
-          && cart.map((item) => (
-            <CartItem
-              key={item.id}
-              id={item.id}
-              image={item.product_image_url}
-              name={item.name}
-              desc={item.description}
-              price={item.price}
-              quantity={item.quantity}
-            />
-          ))}
+            && cart.map((item) => (
+              <CartItem
+                key={item.id}
+                id={item.id}
+                image={item.product_image_url}
+                name={item.name}
+                desc={item.description}
+                price={item.price}
+                quantity={item.quantity} />
+            ))}
         </div>
       </div>
       <div className="cart_summary_checkout">
@@ -58,12 +57,12 @@ const MyCart = ({ onClose }) => {
             </p>
           </div>
         </div>
-        <button type="button" className="viewCart"><Link to="/viewCart">View Cart</Link></button>
-        <button type="button" className="checkout_btn">Checkout</button>
-        <div className="termsCheckbox">
-          <input type="checkbox" className="checkbox" />
-          Terms and Conditions
-        </div>
+        <Link to="/viewCart"><button type="button" className="viewCart">View Cart</button></Link>
+        <Link to="/checkOut"><button type="button" className="checkout_btn">Checkout</button></Link>
+      <div className="termsCheckbox">
+        <input type="checkbox" className="checkbox" />
+        Terms and Conditions
+      </div>
       </div>
     </div>
   );

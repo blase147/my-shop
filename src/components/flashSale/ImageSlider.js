@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './flashSale.scss';
-import Item from '../myCart/item';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../Redux/Reducers/cartSlice';
 
 const ImageSlider = ({ products }) => {
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
 
-  const handleOnHover = () => {
-    setHover(true);
-  };
+  // const handleOnHover = () => {
+  //   setHover(true);
+  // };
 
-  const handleOnBlur = () => {
-    setHover(false);
-  };
+  // const handleOnBlur = () => {
+  //   setHover(false);
+  // };
+  const dispatch = useDispatch();
 
   const settings = {
     dots: true,
@@ -35,27 +37,24 @@ const ImageSlider = ({ products }) => {
         slidesToScroll={settings.slidesToScroll}
       >
         {products.map((product) => (
-          <>
-            <div
-              key={product.id}
-              className="product-slide"
-              onMouseEnter={handleOnHover}
-              onMouseLeave={handleOnBlur}
-            >
-              <img
-                src={product.product_image_url}
-                alt={product.alt}
-                className={`image_map ${hover ? 'showAddToCart' : ''}`}
-              />
-              <div>{hover && <button type="button">Add to cart</button>}</div>
-              <h3>{product.name}</h3>
-              <p>
-                $
-                {product.price}
-              </p>
-            </div>
-            <Item />
-          </>
+          <div
+            key={product.id}
+            className="product-slide"
+            // onMouseEnter={handleOnHover}
+            // onMouseLeave={handleOnBlur}
+          >
+            <img
+              src={product.product_image_url}
+              alt={product.alt}
+              className="product-image"
+            />
+            <div><button type="button" onClick={() => dispatch(addToCart(product))}>Add to cart</button></div>
+            <h3>{product.name}</h3>
+            <p>
+              $
+              {product.price}
+            </p>
+          </div>
         ))}
       </Slider>
     </div>

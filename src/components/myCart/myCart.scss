@@ -170,7 +170,7 @@
       }
     }
 
-    & button:nth-child(2){
+    .viewCart{
       display: flex;
       justify-content: center;
       background-color: blue;
@@ -181,7 +181,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    & button:nth-child(3) {
+    .checkout_btn {
       background-color: grey;
       color: white;
       width: 98%;

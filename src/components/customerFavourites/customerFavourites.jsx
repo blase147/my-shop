@@ -3,6 +3,7 @@ import { FaBolt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productSlice';
 import './customerFavourites.scss';
+import { addToCart } from '../../Redux/Reducers/cartSlice';
 
 const CustomerFavourites = () => {
   const dispatch = useDispatch();
@@ -35,6 +36,14 @@ const CustomerFavourites = () => {
               $
               {product.price}
             </h3>
+            <div>
+              <button
+                type="button"
+                onClick={() => dispatch(addToCart(product))}
+              >
+                Add to cart
+              </button>
+            </div>
           </div>
         ))}
       </div>
