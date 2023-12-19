@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './flashSale.scss';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 
@@ -49,7 +50,7 @@ const ImageSlider = ({ products }) => {
               className="product-image"
             />
             <div><button type="button" onClick={() => dispatch(addToCart(product))}>Add to cart</button></div>
-            <h3>{product.name}</h3>
+            <Link to={`/products/${product.id}`}><h3>{product.name}</h3></Link>
             <p>
               $
               {product.price}

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { FaBolt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { Link } from 'react-router-dom';
+import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import './customerFavourites.scss';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 
@@ -31,7 +32,7 @@ const CustomerFavourites = () => {
               alt={product.name}
               className="customerFavourites_image"
             />
-            <h2>{product.name}</h2>
+            <Link to={`/products/${product.id}`}><h2>{product.name}</h2></Link>
             <h3>
               $
               {product.price}

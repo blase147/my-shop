@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { Link } from 'react-router-dom';
+import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import './shopGallery.scss';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 
@@ -22,11 +23,13 @@ const ShopGallery = () => {
         {products.map((product) => (
           <>
             <div className="shopGallery_card" key={product.id}>
-              <img
-                src={product.product_image_url}
-                alt={product.name}
-                className="shopGallery_image"
-              />
+              <Link to={`/products/${product.id}`}>
+                <img
+                  src={product.product_image_url}
+                  alt={product.name}
+                  className="shopGallery_image"
+                />
+              </Link>
               <div>
                 <button
                   type="button"

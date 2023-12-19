@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './category.scss';
+import { Link } from 'react-router-dom';
 
 const ImageSlider = ({ products }) => {
   const [sliderKey, setSliderKey] = useState(0);
@@ -33,16 +34,18 @@ const ImageSlider = ({ products }) => {
       >
         {products.map((image) => (
           <div key={image.id}>
-            <img
-              src={image.product_image_url}
-              alt={image.alt}
-              className="image_map"
-            />
-            <h3>{image.name}</h3>
-            <p>
-              {image.inventory}
-              Products available
-            </p>
+            <Link to={`/products/${image.id}`}>
+              <img
+                src={image.product_image_url}
+                alt={image.alt}
+                className="image_map"
+              />
+              <h3>{image.name}</h3>
+              <p>
+                {image.inventory}
+                Products available
+              </p>
+            </Link>
           </div>
         ))}
       </Slider>

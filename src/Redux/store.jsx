@@ -10,9 +10,10 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import productsReducer from './Reducers/productSlice';
+import productsReducer from './Reducers/productsSlice';
 import cartReducer from './Reducers/cartSlice';
 import favReducer from './Reducers/favSlice';
+import productReducer from './Reducers/productSlice';
 
 const persistConfig = {
   key: 'root',
@@ -20,12 +21,14 @@ const persistConfig = {
 };
 
 const persistedProductsReducer = persistReducer(persistConfig, productsReducer);
+const persistedProductReducer = persistReducer(persistConfig, productReducer);
 const persistedCartReducer = persistReducer(persistConfig, cartReducer);
 const persistedFavReducer = persistReducer(persistConfig, favReducer);
 
 export const store = configureStore({
   reducer: {
     products: persistedProductsReducer,
+    product: persistedProductReducer,
     cart: persistedCartReducer,
     fav: persistedFavReducer,
   },

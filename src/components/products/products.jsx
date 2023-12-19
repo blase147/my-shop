@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 import { addToFav } from '../../Redux/Reducers/favSlice';
 import './products.scss';
@@ -50,7 +50,7 @@ const Products = () => {
                     )}
                   </div>
                   <h3 className="name">
-                    <Link to={`/${product.id}`}>{product.name}</Link>
+                    <Link to={`${product.id}`}>{product.name}</Link>
                   </h3>
                   <p className="price">
                     $

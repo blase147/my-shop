@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import ImageSlider from './ImageSlider';
 import './banner.scss';
 

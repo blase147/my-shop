@@ -4,6 +4,7 @@ import Category from './components/category/category';
 import ContactUs from './components/contactUs/contactUs';
 import MyCart from './components/myCart/myCart';
 import Products from './components/products/products';
+import Product from './components/product/product';
 import MyFavourites from './components/myFavourites/myFavourites';
 import Home from './components/home/home';
 import ViewCart from './components/myCart/viewCart';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/viewCart" element={<ViewCart />} />
           <Route path="/checkOut" element={<CheckOut />} />
           <Route path="/products" element={<Products />} />
+          <Route path="products/:id" element={<Product />} />
           <Route path="/myFavourites" element={<MyFavourites />} />
         </Routes>
       </Router>

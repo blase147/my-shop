@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { Link } from 'react-router-dom';
+import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './luxury1.scss';
 // import Item from '../myCart/item';
@@ -46,7 +47,9 @@ const Luxury1 = () => {
               className="luxury_image"
             />
             <div className="name_cart">
-              <h2>{product.name}</h2>
+              <Link to={`/products/${product.id}`}>
+                <h2>{product.name}</h2>
+              </Link>
               {hover && (
                 <>
                   <button

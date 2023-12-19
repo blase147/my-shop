@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './favItem.scss';
+import { Link } from 'react-router-dom';
 
 const FavItem = (
   {
-    image, name, desc, price,
+    id, image, name, desc, price,
   },
 ) => (
   <div className="favItem">
     <div>
       <img className="favItem__image" src={image} alt="item" />
-      <p className="favItem__title">{name}</p>
+      <Link to={`/products/${id}`}><p className="favItem__title">{name}</p></Link>
       <p className="favItem__title">{desc}</p>
       <p className="favItem__price">
         <small>$</small>
@@ -25,6 +26,7 @@ FavItem.propTypes = {
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default FavItem;

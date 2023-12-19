@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productSlice';
+import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './luxury2.scss';
 
@@ -28,11 +29,8 @@ const Luxury2 = () => {
               alt={product.name}
               className="luxury_image2"
             />
-            <h2>{product.name}</h2>
-            <button
-              type="button"
-              onClick={() => dispatch(addToCart(product))}
-            >
+            <Link to={`/products/${product.id}`}><h2>{product.name}</h2></Link>
+            <button type="button" onClick={() => dispatch(addToCart(product))}>
               Add to Carttt
             </button>
           </div>,
