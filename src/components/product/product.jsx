@@ -49,11 +49,11 @@ const Product = () => {
           <img className="product__image" src={product.product_image_url} alt={product.name} />
           <div className="product__info">
             <p className="product__title">{product.name}</p>
-            <p className="product__title">{product.description}</p>
             <p className="product__price">
               <small>$</small>
               <strong>{product.price}</strong>
             </p>
+            <p className="product__desc">{product.description}</p>
             <div className="myCart_addmorebtn">
               <diV className="dec_inc_cont">
                 <button
@@ -62,7 +62,7 @@ const Product = () => {
                 >
                   -
                 </button>
-                <p>{getTotalQuantity()}</p>
+                <strong>{getTotalQuantity()}</strong>
                 <button
                   type="button"
                   onClick={() => dispatch(incrementQuantity(product))}

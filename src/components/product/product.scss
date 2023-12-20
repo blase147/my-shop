@@ -1,3 +1,5 @@
+@import './../scss/config';
+
 .details-sec {
   display: flex;
   flex-direction: column;
@@ -13,14 +15,29 @@
       width: 50%;
       height: 60vh;
       margin-right: 20px;
+      color: #ffffff;
+      border-radius: 5px;
     }
     .product__info {
-      //   background-color: green;
+      display: flex;
+      flex-direction: column;
+    //   background-color: green;
       text-align: left;
       width: 50%;
+      margin-top: 0;
+      padding-top: 0;
       .product__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        // padding-top: 0;
+        font-size: 2.7em;
+        font-weight: bold;
+      }
+      .product__desc {
+        // font-size: 2em;
       }
       .product__price {
+        font-size: 1.5em;
       }
       .product__button {
       }
@@ -53,15 +70,17 @@
           border-radius: 5px;
           border: none;
           color: #ffffff;
+          cursor: pointer;
         }
       }
       .paypal_btn {
-        color: #ffffff;
+        color: #1a094b;
         border-radius: 5px;
         border: none;
-        background-color: rgb(39, 197, 184);
+        background-color: rgb(238, 234, 8);
         height: 5.5vh;
         width: 100%;
+        // cursor: pointer;
       }
     }
   }
