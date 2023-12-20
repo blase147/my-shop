@@ -24,12 +24,14 @@
 
 .creditCardLogos {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
-  .credite_card {
+
+  .credit_card {
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
-    padding: 3px 8px;
+    padding: 5px 10px;
     margin-left: 10px;
+    background-color: #ece8e8;
   }
 }

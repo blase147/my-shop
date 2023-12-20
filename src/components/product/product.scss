@@ -1,4 +1,4 @@
-@import './../scss/config';
+@import "./../scss/config";
 
 .details-sec {
   display: flex;
@@ -9,7 +9,7 @@
     // background-color: blue;
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 70%;
     margin: auto;
     .product__image {
       width: 50%;
@@ -21,11 +21,20 @@
     .product__info {
       display: flex;
       flex-direction: column;
-    //   background-color: green;
+      //   background-color: green;
       text-align: left;
       width: 50%;
       margin-top: 0;
       padding-top: 0;
+      position: relative;
+      .heart_icon {
+        position: absolute;
+        top: 0;
+        right: -15px;
+        padding: 15px;
+        background-color: rgb(214, 198, 198);
+        border-radius: 50%;
+      }
       .product__title {
         margin-top: 0;
         margin-bottom: 0;
@@ -82,6 +91,57 @@
         width: 100%;
         // cursor: pointer;
       }
+      .share_question_cont {
+        width: 50%;
+        // background-color: red;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        .share_question {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .share_icon,
+          .question_icon {
+            margin-right: 10px;
+            // background-color: green;
+            // padding: 10px;
+          }
+        }
+      }
     }
+  }
+  .product_desc_delivery_cont {
+    // background-color: red;
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+    margin: auto;
+    padding-top: 70px;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #837a7a;
+    text-align: left;
+    border-bottom: solid 1px rgb(131, 127, 127);
+
+    .tab {
+      margin-right: 20px;
+      cursor: pointer;
+      &:hover {
+        border-bottom: solid 2px black;
+      }
+    }
+  }
+  .product_desc_delivery_text {
+    display: flex;
+    flex-direction: column;
+    .text {
+      //   background-color: blue;
+      text-align: left;
+      width: 70%;
+      margin: auto;
+      padding-bottom: 50px;
+    }
+    border-bottom: solid 1px rgb(131, 127, 127);
   }
 }
