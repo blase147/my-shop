@@ -31,8 +31,8 @@ const Menu = () => {
   const navLinks = [
     { url: '/', name: 'Home' },
     { url: '/category', name: 'Category', hasDropdown: true },
-    { url: '/contactUs', name: 'Contact Us' },
     { url: '/products', name: 'Products', hasDropdown: true },
+    { url: '/contactUs', name: 'Contact Us' },
     { url: '/blog', name: 'Blog' },
   ];
 
@@ -67,10 +67,9 @@ const Menu = () => {
                   {url === '/category' && isCategoryHovered && (
                     <div className="dropdown">
                       <div className="dropdown_cont">
-                        <Link to="/men">Mens</Link>
-                        <Link to="/women">Womens</Link>
-                        <Link to="/children">Children</Link>
-                        <Link to="/babies">Babies</Link>
+                        <Link to="/men">Men</Link>
+                        <Link to="/women">Women</Link>
+                        <Link to="/children">Luxury</Link>
                       </div>
                       <div className="featured_category">
                         <h3>Featured Category</h3>
@@ -85,10 +84,10 @@ const Menu = () => {
                   {url === '/products' && isProductsHovered && (
                     <div className="dropdown">
                       <div className="dropdown_cont">
-                        <Link to="/leather_watches">Leather Watches</Link>
-                        <Link to="/necklaces">Necklaces</Link>
-                        <Link to="/gold_watches">Gold Watches</Link>
-                        <Link to="/digital_bangles">Digital Bangles</Link>
+                        <Link to="/necklaces">Jewelries</Link>
+                        <Link to="/gold_watches">Wrist Watches</Link>
+                        <Link to="/digital_bangles">Belts</Link>
+                        <Link to="/digital_bangles">Glasses</Link>
                       </div>
                       <div className="featured_category">
                         <h3>Featured Products</h3>

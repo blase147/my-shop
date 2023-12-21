@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Reducers/productsSlice';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
-import './luxury2.scss';
+import './luxuryDetails.scss';
 
-const Luxury2 = () => {
+const LuxuryProducts = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
   const status = useSelector((state) => state.products.status);
@@ -23,13 +23,15 @@ const Luxury2 = () => {
 
       if (product.price > 20000) {
         luxuryImages.push(
-          <div key={product.id} className="luxury2_images_card">
+          <div key={product.id} className="luxuryDetails_card">
             <img
               src={product.product_image_url}
               alt={product.name}
-              className="luxury2_image"
+              className="luxuryDetails_image"
             />
-            <Link to={`/products/${product.id}`}><h2>{product.name}</h2></Link>
+            <Link to={`/products/${product.id}`}>
+              <h2>{product.name}</h2>
+            </Link>
             <button type="button" onClick={() => dispatch(addToCart(product))}>
               Add to Carttt
             </button>
@@ -42,10 +44,10 @@ const Luxury2 = () => {
   };
 
   return (
-    <div className="luxury2">
-      <div className="luxury2_inner">{renderLuxuryImages1()}</div>
+    <div className="luxuryDetails">
+      <div className="luxuryDetails_cont">{renderLuxuryImages1()}</div>
     </div>
   );
 };
 
-export default Luxury2;
+export default LuxuryProducts;

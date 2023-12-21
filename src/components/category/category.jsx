@@ -6,45 +6,33 @@ import './category.scss';
 
 const Category = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.products);
-  const status = useSelector((state) => state.products.status);
+  const { products } = useSelector((state) => state.products);
 
   useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchProducts());
-    }
-  }, [dispatch, status]);
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
-  // const images = [
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 1', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 2', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 3', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 4', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 5', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 6', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 7', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 8', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 9', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 10', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 11', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 12', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 13', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 14', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 15', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?74850', name: 'Image 16', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 17', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 18', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 19', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 20', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 21', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 22', stock: '126 Products' },
-  //   { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Image 23', stock: '126 Products' },
-  // ];
+  // Check if products are not empty before filtering
+  const jewelries = products ? products.filter((product) => product.product_type === 'Jewelry') : [];
+  const jewelryStock = jewelries.length;
+  const wristWatches = products ? products.filter((product) => product.product_type === 'Wrist Watches') : [];
+  const wristWatchesStock = wristWatches.length;
+  const belts = products ? products.filter((product) => product.product_type === 'Belts') : [];
+  const beltsStock = belts.length;
+  const glasses = products ? products.filter((product) => product.product_type === 'Glasses') : [];
+  const glassesStock = glasses.length;
+
+  const defaultProducts = [
+    { image: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/78/6899101/1.jpg?3056', name: 'Jewelries', stock: `Available Products: ${jewelryStock}` },
+    { image: 'https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/81/6133011/1.jpg?7485', name: 'Wrist Watches', stock: `Available Products: ${wristWatchesStock}` },
+    { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrCyWZZXEdfQ3IBgzkkFeEhGrxbUgWfUjw9js57Tpu0f0lbvgqcB3RE_g3NVGwslRFls4&usqp=CAU', name: 'Belts', stock: `Available Products: ${beltsStock}` },
+    { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZbjL2K9sP0GJCB02Y0zCBwHz2e4FyxlSHotIzwL8_JoDOPpVgn96Qwt9OsJN4eGRyjI&usqp=CAU', name: 'Glasses', stock: `Available Products: ${glassesStock}` },
+  ];
 
   return (
     <div className="category">
       <h2 className="category_label">Categories</h2>
-      <ImageSlider products={products} />
+      <ImageSlider defaultProducts={defaultProducts} />
     </div>
   );
 };

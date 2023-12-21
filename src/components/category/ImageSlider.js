@@ -6,21 +6,21 @@ import 'slick-carousel/slick/slick-theme.css';
 import './category.scss';
 import { Link } from 'react-router-dom';
 
-const ImageSlider = ({ products }) => {
+const ImageSlider = ({ defaultProducts }) => {
   const [sliderKey, setSliderKey] = useState(0);
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     key: sliderKey,
   };
 
   useEffect(() => {
     setSliderKey((prevKey) => prevKey + 1);
-  }, [products]);
+  }, [defaultProducts]);
 
   return (
     <div className="full-screen-slider">
@@ -32,19 +32,19 @@ const ImageSlider = ({ products }) => {
         slidesToScroll={settings.slidesToScroll}
         key={settings.key}
       >
-        {products.map((image) => (
+        {defaultProducts.map((image) => (
           <div key={image.id}>
-            <Link to={`/products/${image.id}`}>
+            <Link to="/categories/">
               <img
-                src={image.product_image_url}
+                src={image.image}
                 alt={image.alt}
                 className="image_map"
               />
               <h3>{image.name}</h3>
-              <p>
-                {image.inventory}
-                Products available
-              </p>
+              <div>
+                <p>{image.stock}</p>
+                {/* <p>Products available</p> */}
+              </div>
             </Link>
           </div>
         ))}
@@ -54,13 +54,13 @@ const ImageSlider = ({ products }) => {
 };
 
 ImageSlider.propTypes = {
-  products: PropTypes.arrayOf(
+  defaultProducts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       product_image_url: PropTypes.string.isRequired,
       alt: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      inventory: PropTypes.string.isRequired,
+      stock: PropTypes.string.isRequired, // Corrected from 'inventory' to 'stock'
     }),
   ).isRequired,
 };

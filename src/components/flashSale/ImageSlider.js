@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -8,16 +8,19 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../Redux/Reducers/cartSlice';
 
+const shuffleArray = (array) => {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    // Swap elements without using unary operator '--'
+    const temp = shuffledArray[i];
+    shuffledArray[i] = shuffledArray[j];
+    shuffledArray[j] = temp;
+  }
+  return shuffledArray;
+};
+
 const ImageSlider = ({ products }) => {
-  // const [hover, setHover] = useState(false);
-
-  // const handleOnHover = () => {
-  //   setHover(true);
-  // };
-
-  // const handleOnBlur = () => {
-  //   setHover(false);
-  // };
   const dispatch = useDispatch();
 
   const settings = {
@@ -28,6 +31,8 @@ const ImageSlider = ({ products }) => {
     slidesToScroll: 1,
   };
 
+  const shuffledProducts = shuffleArray(products);
+
   return (
     <div className="flash_sale_slider">
       <Slider
@@ -37,13 +42,8 @@ const ImageSlider = ({ products }) => {
         slidesToShow={settings.slidesToShow}
         slidesToScroll={settings.slidesToScroll}
       >
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="product-slide"
-            // onMouseEnter={handleOnHover}
-            // onMouseLeave={handleOnBlur}
-          >
+        {shuffledProducts.map((product) => (
+          <div key={product.id} className="product-slide">
             <img
               src={product.product_image_url}
               alt={product.alt}

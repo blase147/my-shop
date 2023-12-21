@@ -1,0 +1,16 @@
+.luxuryDetails {
+  .luxuryDetails_cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    .luxuryDetails_card {
+        width: 33.3%;
+      .luxuryDetails_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

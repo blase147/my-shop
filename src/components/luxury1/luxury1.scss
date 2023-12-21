@@ -1,34 +1,36 @@
 .luxury1 {
-  // display: flex;
-  // background-color: red;
+  margin-bottom: 100px;
   .luxury1_inner {
     display: flex;
     justify-content: center;
     margin: auto;
     width: 60%;
-    // background-color: green;
   }
-}
 
-.luxury_images_card1 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  // background-color: blue;
-  .luxury_image {
+  .luxury_images_card1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    // max-width: 600vw;
-    height: 50vh;
-    // max-height: 50vh;
-    // border-radius: 15px;
+    // background-color: blue;
+    .luxury_image {
+      width: 100%;
+      // max-width: 600vw;
+      height: 50vh;
+      // max-height: 50vh;
+      border-radius: 15px;
+    }
   }
-}
 
-.name_cart {
-  position: absolute;
-  top: 80%;
-  left: 50%;
+  .name_cart {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    padding: 0 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+  }
 }

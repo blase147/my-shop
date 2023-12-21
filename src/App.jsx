@@ -10,6 +10,7 @@ import Home from './components/home/home';
 import ViewCart from './components/myCart/viewCart';
 import './App.css';
 import CheckOut from './components/myCart/checkOut';
+import LuxuryProducts from './components/luxury1/luxuryDetails';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="products/:id" element={<Product />} />
           <Route path="/myFavourites" element={<MyFavourites />} />
+          <Route path="/luxuryDetails" element={<LuxuryProducts />} />
         </Routes>
       </Router>
     </div>

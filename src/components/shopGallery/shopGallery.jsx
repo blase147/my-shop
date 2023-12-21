@@ -21,29 +21,21 @@ const ShopGallery = () => {
       <h2>Shop Gallery</h2>
       <div className="shopGallery_inner">
         {products.map((product) => (
-          <>
-            <div className="shopGallery_card" key={product.id}>
-              <Link to={`/products/${product.id}`}>
-                <img
-                  src={product.product_image_url}
-                  alt={product.name}
-                  className="shopGallery_image"
-                />
-              </Link>
-              <div>
-                <button
-                  type="button"
-                  onClick={() => dispatch(addToCart(product))}
-                >
-                  Add to cart
-                </button>
-              </div>
-            </div>
-          </>
+          <div className="shopGallery_card" key={product.id}>
+            <Link to={`/products/${product.id}`}>
+              <img
+                src={product.product_image_url}
+                alt={product.name}
+                className="shopGallery_image"
+              />
+            </Link>
+            <button type="button" onClick={() => dispatch(addToCart(product))}>
+              Add to cart
+            </button>
+          </div>
         ))}
       </div>
       <h2>See + more</h2>
-      <hr />
     </div>
   );
 };
