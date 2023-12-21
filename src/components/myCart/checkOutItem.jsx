@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa';
-import './checkOut.scss';
+// import './checkOut.scss';
 import { removeItem, decrementQuantity, incrementQuantity } from '../../Redux/Reducers/cartSlice';
 
 const CheckOutItem = (

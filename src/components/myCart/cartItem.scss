@@ -3,15 +3,18 @@
   justify-content: center;
   //   background-color: #670ef7;
   margin-bottom: 10px;
+
   .cartItem__image {
     width: 50%;
     border-radius: 15px;
   }
+
   .cartItem__info {
     width: 50%;
     padding: 0 5px;
     text-align: left;
   }
+
   .myCart_addmorebtn {
     display: flex;
     justify-content: space-around;
@@ -24,5 +27,8 @@
       margin: 0;
       padding: 0;
     }
+  }
+  .trashbtn {
+    cursor: pointer;
   }
 }

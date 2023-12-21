@@ -4,9 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShareAlt, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { fetchCarById } from '../../Redux/Reducers/productSlice';
-import {
-  addToCart, decrementQuantity, incrementQuantity,
-} from '../../Redux/Reducers/cartSlice';
+import { addToCart, incrementPQuantity } from '../../Redux/Reducers/cartSlice';
 import './product.scss';
 import Header from '../header/header';
 import Menu from '../menu/menu';
@@ -22,22 +20,41 @@ const Product = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const product = useSelector((state) => state.product.product);
-  const [activeItem, setActiveItem] = useState('description'); // Set initial state to 'description'
   const cart = useSelector((state) => state.cart.cart);
+  const [activeItem, setActiveItem] = useState('description');
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     dispatch(fetchCarById(id));
   }, [dispatch, id]);
 
-  const getTotalQuantity = () => {
-    let total = 0;
-    if (Array.isArray(cart)) {
-      cart.forEach((item) => {
-        total += item.quantity;
-      });
-    }
-    return total;
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
   };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const existingItem = cart.find((item) => item.id === product.id);
+
+  const handleAddToCart = () => {
+    if (existingItem) {
+      dispatch(incrementPQuantity({ id: product.id, quantity }));
+    } else {
+      dispatch(addToCart({ ...product, quantity }));
+    }
+  };
+  // const handleRemoveFromCart = () => {
+  //   if (itemInCart && itemInCart.quantity > 1) {
+  //     dispatch(decrementQuantity({ id, quantity: quantity }));
+  //   } else {
+  //     // Define removeFromCart in your cartSlice and dispatch it
+  //     // Example: dispatch(removeFromCart(id));
+  //   }
+  // };
 
   return (
     <section className="details-sec">
@@ -65,24 +82,18 @@ const Product = () => {
               <p className="product__desc">{product.description}</p>
               <div className="myCart_addmorebtn">
                 <div className="dec_inc_cont">
-                  <button
-                    type="button"
-                    onClick={() => dispatch(decrementQuantity(product))}
-                  >
+                  <button type="button" onClick={handleDecrement}>
                     -
                   </button>
-                  <strong>{getTotalQuantity()}</strong>
-                  <button
-                    type="button"
-                    onClick={() => dispatch(incrementQuantity(product))}
-                  >
+                  <strong>{quantity}</strong>
+                  <button type="button" onClick={handleIncrement}>
                     +
                   </button>
                 </div>
                 <button
                   className="add_to_cart"
                   type="button"
-                  onClick={() => dispatch(addToCart(product))}
+                  onClick={handleAddToCart}
                 >
                   Add to Cart
                 </button>
@@ -111,7 +122,7 @@ const Product = () => {
           </div>
           <div className="product_desc_delivery_cont">
             <div
-              className="tab"
+              className={`tab ${activeItem === 'description' ? 'active' : ''}`}
               role="button"
               tabIndex={0}
               onClick={() => setActiveItem('description')}
@@ -124,7 +135,7 @@ const Product = () => {
               DESCRIPTION
             </div>
             <div
-              className="tab"
+              className={`tab ${activeItem === 'delivery' ? 'active' : ''}`}
               role="button"
               tabIndex={0}
               onClick={() => setActiveItem('delivery')}
@@ -137,7 +148,7 @@ const Product = () => {
               DELIVERY POLICY
             </div>
             <div
-              className="tab"
+              className={`tab ${activeItem === 'shipping' ? 'active' : ''}`}
               role="button"
               tabIndex={0}
               onClick={() => setActiveItem('shipping')}

@@ -31,6 +31,7 @@
       z-index: 1000;
     }
   }
+
   ul {
     display: flex;
     // align-items: center;
@@ -38,15 +39,18 @@
     padding: 0;
     list-style-type: none;
   }
+
   button {
     margin-right: 25px;
     padding-bottom: 10px;
     // background-color: red;
   }
+
   a {
     text-decoration: none;
     color: #333;
   }
+
   .favourites_counter {
     background-color: rgb(64, 91, 212);
     border-radius: 50%;

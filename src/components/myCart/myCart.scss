@@ -82,6 +82,7 @@
     // background-color: rgb(17, 189, 25);
     padding: 10px; /* Add some padding for better appearance */
     height: 60vh;
+
     .myCart_card {
       display: flex;
       flex-direction: column;
@@ -156,6 +157,7 @@
     // position: absolute;
     // bottom: 0;
     padding: 0;
+
     .cart_total {
       display: flex;
       // justify-content: space-between;
@@ -170,7 +172,7 @@
       }
     }
 
-    .viewCart{
+    .viewCart {
       display: flex;
       justify-content: center;
       background-color: blue;
@@ -181,6 +183,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .checkout_btn {
       background-color: grey;
       color: white;
@@ -190,6 +193,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .termsCheckbox {
       display: flex;
       margin-bottom: 1rem;

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 const cartSlice = createSlice({
@@ -11,8 +13,10 @@ const cartSlice = createSlice({
       const itemInCart = state.cart.find((item) => item.id === id);
 
       if (itemInCart) {
+        // Use Immer's draft syntax for immutability
         itemInCart.quantity += 1;
       } else {
+        // Use Immer's draft syntax for immutability
         state.cart.push({ ...action.payload, quantity: 1 });
       }
     },
@@ -21,24 +25,33 @@ const cartSlice = createSlice({
       const item = state.cart.find((item) => item.id === id);
 
       if (item) {
+        // Use Immer's draft syntax for immutability
         item.quantity += 1;
       }
     },
+    incrementPQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const item = state.cart.find((item) => item.id === id);
+
+      if (item) {
+        // Use Immer's draft syntax for immutability
+        item.quantity += quantity;
+      }
+    },
+
     decrementQuantity: (state, action) => {
       const { id } = action.payload;
       const item = state.cart.find((item) => item.id === id);
 
       if (item && item.quantity > 1) {
+        // Use Immer's draft syntax for immutability
         item.quantity -= 1;
       }
     },
     removeItem: (state, action) => {
       const { id } = action.payload;
-      const updatedCart = state.cart.filter((item) => item.id !== id);
-      return {
-        ...state,
-        cart: updatedCart,
-      };
+      // Use Immer's draft syntax for immutability
+      state.cart = state.cart.filter((item) => item.id !== id);
     },
   },
 });
@@ -49,4 +62,5 @@ export const {
   incrementQuantity,
   decrementQuantity,
   removeItem,
+  incrementPQuantity,
 } = cartSlice.actions;

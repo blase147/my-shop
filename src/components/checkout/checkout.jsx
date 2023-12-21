@@ -1,4 +1,5 @@
 import React from 'react';
+import './checkOut.scss';
 
 const Checkout = () => (
   <div className="checkout">

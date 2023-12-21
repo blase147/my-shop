@@ -5,19 +5,22 @@
   flex-direction: column;
   margin: auto;
   margin-top: 50px;
+
   .product {
     // background-color: blue;
     display: flex;
     justify-content: space-between;
     width: 70%;
     margin: auto;
+
     .product__image {
       width: 50%;
       height: 60vh;
       margin-right: 20px;
-      color: #ffffff;
+      color: #fff;
       border-radius: 5px;
     }
+
     .product__info {
       display: flex;
       flex-direction: column;
@@ -27,6 +30,7 @@
       margin-top: 0;
       padding-top: 0;
       position: relative;
+
       .heart_icon {
         position: absolute;
         top: 0;
@@ -35,6 +39,7 @@
         background-color: rgb(214, 198, 198);
         border-radius: 50%;
       }
+
       .product__title {
         margin-top: 0;
         margin-bottom: 0;
@@ -42,14 +47,15 @@
         font-size: 2.7em;
         font-weight: bold;
       }
-      .product__desc {
-        // font-size: 2em;
-      }
+
+      //   .product__desc {
+      //     // font-size: 2em;
+      //   }
+
       .product__price {
         font-size: 1.5em;
       }
-      .product__button {
-      }
+
       .myCart_addmorebtn {
         //   background-color: red;
         display: flex;
@@ -57,6 +63,7 @@
         width: 100%;
         align-items: center;
         margin-bottom: 10px;
+
         .dec_inc_cont {
           display: flex;
           justify-content: space-between;
@@ -67,21 +74,24 @@
           //   margin-right: 10px;
           height: 5.5vh;
           border-radius: 5px;
+
           & button {
             background-color: white;
             border: none;
           }
         }
+
         .add_to_cart {
           background-color: blue;
           width: 75%;
           height: 5.5vh;
           border-radius: 5px;
           border: none;
-          color: #ffffff;
+          color: #fff;
           cursor: pointer;
         }
       }
+
       .paypal_btn {
         color: #1a094b;
         border-radius: 5px;
@@ -91,16 +101,19 @@
         width: 100%;
         // cursor: pointer;
       }
+
       .share_question_cont {
         width: 50%;
         // background-color: red;
         display: flex;
         justify-content: flex-start;
         gap: 20px;
+
         .share_question {
           display: flex;
           justify-content: center;
           align-items: center;
+
           .share_icon,
           .question_icon {
             margin-right: 10px;
@@ -111,6 +124,7 @@
       }
     }
   }
+
   .product_desc_delivery_cont {
     // background-color: red;
     display: flex;
@@ -127,14 +141,28 @@
     .tab {
       margin-right: 20px;
       cursor: pointer;
+
       &:hover {
         border-bottom: solid 2px black;
       }
     }
+    .tab {
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 10px;
+        display: inline-block;
+      }
+      
+      .tab.active {
+        border-bottom: 2px solid blue; /* Change the color and style as needed */
+      }
+      
   }
+
   .product_desc_delivery_text {
     display: flex;
     flex-direction: column;
+
     .text {
       //   background-color: blue;
       text-align: left;
@@ -142,6 +170,7 @@
       margin: auto;
       padding-bottom: 50px;
     }
+
     border-bottom: solid 1px rgb(131, 127, 127);
   }
 }

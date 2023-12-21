@@ -1,5 +1,5 @@
 import React from 'react';
-import './checkOut.scss';
+// import './checkOut.scss';
 import { useSelector } from 'react-redux';
 import CheckOutItem from './checkOutItem';
 import Logo from '../logo/logo';

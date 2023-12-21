@@ -1,14 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { IoCartOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import CartItem from './cartItem';
 import Total from './total';
 import './myCart.scss';
+import { incrementQuantity, decrementQuantity, removeItem } from '../../Redux/Reducers/cartSlice';
 
 const MyCart = ({ onClose }) => {
   const cart = useSelector((state) => state.cart.cart);
+  const dispatch = useDispatch();
 
   const getTotalQuantity = () => {
     let total = 0;
@@ -37,16 +39,20 @@ const MyCart = ({ onClose }) => {
       <div className="myCart_cont">
         <div className="myCart_card">
           {Array.isArray(cart)
-            && cart.map((item) => (
-              <CartItem
-                key={item.id}
-                id={item.id}
-                image={item.product_image_url}
-                name={item.name}
-                desc={item.description}
-                price={item.price}
-                quantity={item.quantity} />
-            ))}
+           && cart.map((item) => (
+             <CartItem
+               key={item.id}
+               id={item.id}
+               image={item.product_image_url}
+               name={item.name}
+               desc={item.description}
+               price={item.price}
+               quantity={item.quantity}
+               onIncrement={() => dispatch(incrementQuantity(item))}
+               onDecrement={() => dispatch(decrementQuantity(item))}
+               onRemove={() => dispatch(removeItem(item))}
+             />
+           ))}
         </div>
       </div>
       <div className="cart_summary_checkout">
@@ -57,12 +63,20 @@ const MyCart = ({ onClose }) => {
             </p>
           </div>
         </div>
-        <Link to="/viewCart"><button type="button" className="viewCart">View Cart</button></Link>
-        <Link to="/checkOut"><button type="button" className="checkout_btn">Checkout</button></Link>
-      <div className="termsCheckbox">
-        <input type="checkbox" className="checkbox" />
-        Terms and Conditions
-      </div>
+        <Link to="/viewCart">
+          <button type="button" className="viewCart">
+            View Cart
+          </button>
+        </Link>
+        <Link to="/checkOut">
+          <button type="button" className="checkout_btn">
+            Checkout
+          </button>
+        </Link>
+        <div className="termsCheckbox">
+          <input type="checkbox" className="checkbox" />
+          Terms and Conditions
+        </div>
       </div>
     </div>
   );

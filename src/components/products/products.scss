@@ -1,6 +1,7 @@
 .products {
   //   background-color: red;
   padding: 30px;
+
   .products_cont {
     display: flex;
     justify-content: center;
@@ -10,6 +11,7 @@
     width: 80%;
     margin: auto;
     padding: 50px;
+
     .products_card {
       display: flex;
       flex-direction: column;
@@ -19,6 +21,7 @@
       width: 20%;
       border-radius: 15px;
       border: 1px solid black;
+
       .product_image {
         display: flex;
         // background-color: yellow;
@@ -26,6 +29,7 @@
         // height: 400px;
         border-radius: 15px;
       }
+
       & p {
         padding: 5px;
         margin: 0;
