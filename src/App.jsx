@@ -13,6 +13,11 @@ import CheckOut from './components/myCart/checkOut';
 import LuxuryProducts from './components/luxury1/luxuryDetails';
 import Women from './components/category/women';
 import Men from './components/category/men';
+import Watches from './components/products/watches';
+import Belts from './components/products/belts';
+import Jewelries from './components/products/jewelries';
+import Glasses from './components/products/glasses';
+import CategoryDetails from './components/category/categoryDetails';
 
 function App() {
   return (
@@ -31,6 +36,11 @@ function App() {
           <Route path="/luxuryDetails" element={<LuxuryProducts />} />
           <Route path="/women" element={<Women />} />
           <Route path="/men" element={<Men />} />
+          <Route path="/watches" element={<Watches />} />
+          <Route path="/belts" element={<Belts />} />
+          <Route path="/glasses" element={<Glasses />} />
+          <Route path="/jewelries" element={<Jewelries />} />
+          <Route path="/categoryDetails" element={<CategoryDetails />} />
         </Routes>
       </Router>
     </div>

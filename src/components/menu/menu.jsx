@@ -8,7 +8,7 @@ import '../header/header.scss';
 
 const Menu = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
-  const [isCategoryHovered, setIsCategoryHovered] = useState(false);
+  const [isCategoryDetailsHovered, setIsCategoryDetailsHovered] = useState(false);
   const [isProductsHovered, setisProductsHovered] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Menu = () => {
 
   const navLinks = [
     { url: '/', name: 'Home' },
-    { url: '/category', name: 'Category', hasDropdown: true },
+    { url: '/categoryDetails', name: 'Category', hasDropdown: true },
     { url: '/products', name: 'Products', hasDropdown: true },
     { url: '/contactUs', name: 'Contact Us' },
     { url: '/blog', name: 'Blog' },
@@ -45,17 +45,17 @@ const Menu = () => {
             <li
               key={name}
               onMouseEnter={() => {
-                if (url === '/category') {
-                  setIsCategoryHovered(true);
+                if (url === '/categoryDetails') {
+                  setIsCategoryDetailsHovered(true);
                   setisProductsHovered(false);
                 } else if (url === '/products') {
                   setisProductsHovered(true);
-                  setIsCategoryHovered(false);
+                  setIsCategoryDetailsHovered(false);
                 }
               }}
               onMouseLeave={() => {
-                if (url === '/category') {
-                  setIsCategoryHovered(false);
+                if (url === '/categoryDetails') {
+                  setIsCategoryDetailsHovered(false);
                 } else if (url === '/products') {
                   setisProductsHovered(false);
                 }
@@ -64,19 +64,19 @@ const Menu = () => {
               {hasDropdown ? (
                 <>
                   <Link to={url}>{name}</Link>
-                  {url === '/category' && isCategoryHovered && (
+                  {url === '/categoryDetails' && isCategoryDetailsHovered && (
                     <div className="dropdown">
                       <div className="dropdown_cont">
                         <Link to="/men">Men</Link>
                         <Link to="/women">Women</Link>
                         <Link to="/luxuryDetails">Luxury</Link>
                       </div>
-                      <div className="featured_category">
-                        <h3>Featured Category</h3>
+                      <div className="featured_categoryDetails">
+                        <h3>Featured</h3>
                         <img
                           src="https://baajoo.com/wp-content/uploads/2023/05/MTP-VD200G-1B-000.jpg"
                           alt="featured product"
-                          className="featured_category_image"
+                          className="featured_categoryDetails_image"
                         />
                       </div>
                     </div>
@@ -85,16 +85,16 @@ const Menu = () => {
                     <div className="dropdown">
                       <div className="dropdown_cont">
                         <Link to="/jewelries">Jewelries</Link>
-                        <Link to="/wrist_watches">Wrist Watches</Link>
+                        <Link to="/watches">Watches</Link>
                         <Link to="/belts">Belts</Link>
                         <Link to="/glasses">Glasses</Link>
                       </div>
-                      <div className="featured_category">
+                      <div className="featured_categoryDetails">
                         <h3>Featured Products</h3>
                         <img
                           src="https://baajoo.com/wp-content/uploads/2023/05/MTP-VD200G-1B-000.jpg"
                           alt="featured product"
-                          className="featured_category_image"
+                          className="featured_categoryDetails_image"
                         />
                       </div>
                     </div>
