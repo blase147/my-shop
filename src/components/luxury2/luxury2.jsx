@@ -1,44 +1,42 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../Redux/Reducers/productsSlice';
-import { addToCart } from '../../Redux/Reducers/cartSlice';
 import './luxury2.scss';
 
 const Luxury2 = () => {
-  const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.products);
-  const status = useSelector((state) => state.products.status);
-
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchProducts());
-    }
-  }, [dispatch, status]);
+  const products = [
+    {
+      id: 1,
+      image: 'https://qnetforlife.com/wp-content/uploads/2023/05/Woman-Wearing-Watch-Closeup-1000x500.jpg',
+      name: 'Women',
+    },
+    {
+      id: 2,
+      image: 'https://www.watchesandcrystals.com/cdn/shop/articles/quality-luxury-watches-to-style-mens-wardrobe-812147.jpg?v=1659676083',
+      name: 'Men',
+    },
+  ];
 
   const renderLuxuryImages1 = () => {
     const luxuryImages = [];
+
     for (let i = 0; i < products.length; i += 1) {
       const product = products[i];
-
-      if (product.price > 20000) {
+      if (product.image) {
         luxuryImages.push(
-          <div key={product.id} className="luxury2_images_card">
-            <img
-              src={product.product_image_url}
-              alt={product.name}
-              className="luxury2_image"
-            />
-            <Link to={`/products/${product.id}`}><h2>{product.name}</h2></Link>
-            <button type="button" onClick={() => dispatch(addToCart(product))}>
-              Add to Carttt
-            </button>
+          <div key={product.id} className="luxury_images_card2">
+            <Link to={product.name.toLowerCase() === 'women' ? '/women/' : '/men/'}>
+              <img src={product.image} alt={product.name} className="luxury_image" />
+            </Link>
+            <div className="name_cart">
+              <Link to={product.name.toLowerCase() === 'women' ? '/women/' : '/men/'}>
+                <h2>{product.name}</h2>
+              </Link>
+            </div>
           </div>,
         );
       }
     }
-
-    return luxuryImages.slice(0, 2);
+    return luxuryImages;
   };
 
   return (

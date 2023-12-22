@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 const favSlice = createSlice({
@@ -12,8 +14,10 @@ const favSlice = createSlice({
       const itemInFav = state.fav.find((item) => item.id === id);
 
       if (itemInFav) {
+        // Use Immer's draft syntax for immutability
         itemInFav.quantity += 1;
       } else {
+        // Use Immer's draft syntax for immutability
         state.fav.push({ ...action.payload, quantity: 1 });
       }
     },
@@ -22,24 +26,33 @@ const favSlice = createSlice({
       const item = state.fav.find((item) => item.id === id);
 
       if (item) {
+        // Use Immer's draft syntax for immutability
         item.quantity += 1;
       }
     },
+    incrementPQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const item = state.fav.find((item) => item.id === id);
+
+      if (item) {
+        // Use Immer's draft syntax for immutability
+        item.quantity += quantity;
+      }
+    },
+
     decrementQuantity: (state, action) => {
       const { id } = action.payload;
       const item = state.fav.find((item) => item.id === id);
 
       if (item && item.quantity > 1) {
+        // Use Immer's draft syntax for immutability
         item.quantity -= 1;
       }
     },
     removeItem: (state, action) => {
       const { id } = action.payload;
-      const updatedFav = state.fav.filter((item) => item.id !== id);
-      return {
-        ...state,
-        fav: updatedFav,
-      };
+      // Use Immer's draft syntax for immutability
+      state.fav = state.fav.filter((item) => item.id !== id);
     },
   },
 });

@@ -8,7 +8,7 @@ import './luxury1.scss';
 
 const Luxury1 = () => {
   const products = [
-    { id: 1, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Ce1Nsb7RPFYmx_Btbb9o7Sh6oNmQiSV1vax638pFRdQATJuJdky4AzQ00RT9OiwmdpU&usqp=CAU', name: 'Luxury Wears' },
+    { id: 1, image: 'https://www.chubb.com/content/dam/chubb-sites/chubb/global/images/things/engagement-watches_1280x528.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg', name: 'Luxury Wears' },
   ];
 
   const renderLuxuryImages1 = () => {

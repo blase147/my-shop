@@ -1,12 +1,5 @@
 .myfav {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // width: 100%;
-  // margin: auto;
-  // padding-top: 100px;
   // background-color: red;
-
   .myfav_cont {
     display: flex;
     box-sizing: border-box;
@@ -16,8 +9,7 @@
     margin: auto;
     gap: 20px;
     text-align: left;
-    // background-color: brown;
-
+    // background-color: rgb(139, 190, 20);
     .myFav_card {
       display: flex;
       flex-direction: column;
@@ -42,12 +34,11 @@
       }
     }
   }
+}
 
-  .myfav_addmorebtn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
+.myfav_addmorebtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }

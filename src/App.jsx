@@ -11,6 +11,8 @@ import ViewCart from './components/myCart/viewCart';
 import './App.css';
 import CheckOut from './components/myCart/checkOut';
 import LuxuryProducts from './components/luxury1/luxuryDetails';
+import Women from './components/category/women';
+import Men from './components/category/men';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="products/:id" element={<Product />} />
           <Route path="/myFavourites" element={<MyFavourites />} />
           <Route path="/luxuryDetails" element={<LuxuryProducts />} />
+          <Route path="/women" element={<Women />} />
+          <Route path="/men" element={<Men />} />
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,21 @@
+.men {
+  .men_cont {
+    //   background-color: #f72020;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+
+    .men_card {
+      text-align: left;
+      width: 25%;
+
+      .men_image {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+}

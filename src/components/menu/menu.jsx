@@ -69,7 +69,7 @@ const Menu = () => {
                       <div className="dropdown_cont">
                         <Link to="/men">Men</Link>
                         <Link to="/women">Women</Link>
-                        <Link to="/children">Luxury</Link>
+                        <Link to="/luxuryDetails">Luxury</Link>
                       </div>
                       <div className="featured_category">
                         <h3>Featured Category</h3>
@@ -84,10 +84,10 @@ const Menu = () => {
                   {url === '/products' && isProductsHovered && (
                     <div className="dropdown">
                       <div className="dropdown_cont">
-                        <Link to="/necklaces">Jewelries</Link>
-                        <Link to="/gold_watches">Wrist Watches</Link>
-                        <Link to="/digital_bangles">Belts</Link>
-                        <Link to="/digital_bangles">Glasses</Link>
+                        <Link to="/jewelries">Jewelries</Link>
+                        <Link to="/wrist_watches">Wrist Watches</Link>
+                        <Link to="/belts">Belts</Link>
+                        <Link to="/glasses">Glasses</Link>
                       </div>
                       <div className="featured_category">
                         <h3>Featured Products</h3>

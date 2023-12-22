@@ -4,9 +4,15 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    // margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    // background-color: red;
     .luxuryDetails_card {
-        width: 33.3%;
+      width: 25%;
+
       .luxuryDetails_image {
+        border-radius: 15px;
         width: 100%;
         height: 100%;
         object-fit: cover;
