@@ -1,0 +1,36 @@
+.copyright {
+  font-size: 12px;
+  margin: 0;
+  background-color: black;
+  width: 100%;
+
+  .copyright_cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // margin: auto;
+    color: #999;
+    font-size: 12px;
+    // margin-left: 260px;
+
+    .copyright_text {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1.5em;
+      gap: 5px;
+    }
+  }
+}
+
+.creditCardLogos {
+  display: flex;
+  justify-content: flex-start;
+
+  .credit_card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #ece8e8;
+  }
+}

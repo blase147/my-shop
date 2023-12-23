@@ -1,0 +1,208 @@
+.myCart {
+  height: 100%;
+  width: 20%;
+  background-color: rgb(252, 247, 247);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  // .checkout_btn {
+  //   button {
+  //     background-color: blue;
+  //     color: white;
+  //     width: 98%;
+  //     padding: 10px;
+  //     margin-bottom: 10px;
+  //     border-radius: 5px;
+  //     cursor: pointer;
+  //   }
+  // }
+
+  // .view_cart_btn {
+  //   button {
+  //     background-color: grey;
+  //     color: white;
+  //     width: 98%;
+  //     padding: 10px;
+  //     margin: 5px;
+  //     border-radius: 5px;
+  //     cursor: pointer;
+  //   }
+  // }
+
+  .title_closebtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    border-bottom: 1px solid grey;
+
+    .cart_no {
+      background-color: rgb(64, 91, 212);
+      border-radius: 50%;
+      width: 20px; /* Adjust the width to your preference */
+      height: 20px; /* Keep the height the same as width to maintain a circular shape */
+      font-size: 0.6em;
+      font-weight: 900;
+      position: relative;
+      top: -10px;
+      left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 1px;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+      gap: 5px;
+      font-weight: 900;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+  }
+
+  .myCart_cont {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling */
+    // background-color: rgb(17, 189, 25);
+    padding: 10px; /* Add some padding for better appearance */
+    height: 60vh;
+
+    .myCart_card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 12px;
+      padding-bottom: 80px;
+
+      .myCart_img_cont {
+        width: 50%;
+        margin-right: 10px;
+
+        .cart_image {
+          width: 100%;
+          height: 100%;
+          border-radius: 5%;
+        }
+      }
+
+      .cart_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+
+        .cart_title {
+          font-weight: 900;
+          margin-top: 0;
+        }
+
+        .cart_desc {
+          font-size: 1em;
+          margin-left: 0;
+        }
+
+        .cart_price {
+          font-weight: 900;
+          margin-top: 0;
+        }
+
+        .myCart_addmorebtn {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          width: 100%;
+
+          button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+          }
+        }
+
+        .trashbtn {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .cart_summary_checkout {
+    display: flex;
+    flex-direction: column;
+    // justify-items: center;
+    // align-content: center;
+    // align-items: center;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    // position: absolute;
+    // bottom: 0;
+    padding: 0;
+
+    .cart_total {
+      display: flex;
+      // justify-content: space-between;
+      margin-bottom: 1rem;
+      // padding: 15px;
+
+      .cart_total_cont {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    .viewCart {
+      display: flex;
+      justify-content: center;
+      background-color: blue;
+      color: white;
+      width: 98%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .checkout_btn {
+      background-color: grey;
+      color: white;
+      width: 98%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .termsCheckbox {
+      display: flex;
+      margin-bottom: 1rem;
+      align-items: center;
+      padding: 10px;
+
+      .checkbox {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

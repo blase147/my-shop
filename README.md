@@ -27,7 +27,7 @@
 # 📖 My Shop<a name="about-the-project"></a>
 
 
-**My Shop** is an e-commerce template for my online shop. It has a responsive frontend layout coded in React while fetching asynchronous data from API end-points built with Ruby on Rails. 
+**My Shop** is an e-commerce template for my online shop. It has a responsive React [frontend](https://github.com/blase147/my-shop) layout while fetching asynchronous data from API end-points built with Ruby on Rails at the [Backend](https://github.com/blase147/my_shop_backend). 
 
 ![]()
 
@@ -62,7 +62,7 @@
 - My Cart
 - Checkout Page
 - Responsive Design.
-- State Management using Redux toolkit.
+- State Management using Redux.
 - Use latest ES6 modules.
 - Online Payment Gateways
 - Axios for making HTTP requests from the server.
@@ -84,8 +84,9 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 To run this project you need:
+To run this project you need:
 
-- [API](https://github.com/blase147/my-shop)
+- [API](https://github.com/blase147/my_shop_backend)
 - [git](https://git-scm.com/)
 - [node.js](https://nodejs.org/en/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -95,13 +96,13 @@ To run this project you need:
 Clone this repository to your desired folder:
 
 ```
-  git clone git@github.com:blase147/my-shop.git
-  cd myShop
+  git clone git@github.com:blase147/my_shop_backend.git
+  cd my-shop
 ```
 
 ### Install
 
-Install thr project dependencies with:
+Install the project dependencies with:
 
 ```
   npm install
@@ -133,8 +134,8 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-## 👥 Authors <a name="authors"></a>
+<!-- AUTHOR -->
+## 👥 Authors <a name="author"></a>
 
 👤 **Chukwuma Paul Mosanya**
 
@@ -158,7 +159,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/blase147/my-shop/issues).
+Feel free to check the [issues page](https://github.com/blase147/my_shop_backend/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,7 +175,7 @@ If you like this project and want to support me in making cooler projects Give t
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I am grateful to God Almighty for the strength of mind and vigour of body.
+I want to specially appreciate Uloma Mgbeokwere Faith, my wonderful friend for her ever inspiring support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->

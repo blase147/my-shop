@@ -1,0 +1,71 @@
+.header {
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  margin: 0 20px;
+  position: relative;
+  width: 12em;
+  // background-color: red;
+  padding: 5px;
+
+  button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+
+    .cart_no_home {
+      background-color: rgb(64, 91, 212);
+      border-radius: 50%;
+      width: 20px; /* Adjust the width to your preference */
+      height: 20px; /* Keep the height the same as width to maintain a circular shape */
+      font-size: 0.6em;
+      font-weight: 900;
+      position: absolute;
+      top: -20%;
+      left: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 1px;
+      z-index: 1000;
+    }
+  }
+
+  ul {
+    display: flex;
+    // align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  button {
+    margin-right: 25px;
+    padding-bottom: 10px;
+    // background-color: red;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .favourites_counter {
+    background-color: rgb(64, 91, 212);
+    border-radius: 50%;
+    width: 20px; /* Adjust the width to your preference */
+    height: 20px; /* Keep the height the same as width to maintain a circular shape */
+    font-size: 0.6em;
+    font-weight: 900;
+    position: absolute;
+    top: -20%;
+    left: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1px;
+    z-index: 1000;
+  }
+}

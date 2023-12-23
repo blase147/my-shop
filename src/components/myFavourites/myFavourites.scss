@@ -1,0 +1,44 @@
+.myfav {
+  // background-color: red;
+  .myfav_cont {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+    gap: 20px;
+    text-align: left;
+    // background-color: rgb(139, 190, 20);
+    .myFav_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 25%;
+      // background-color: rgb(139, 190, 20);
+      margin-bottom: 0;
+      border-radius: 15px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      padding: 10px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .favItem__image {
+        width: 100%;
+        // border-radius: 15px;
+        // background-color: green;
+      }
+    }
+  }
+}
+
+.myfav_addmorebtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}

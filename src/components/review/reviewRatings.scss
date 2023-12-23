@@ -1,0 +1,19 @@
+.review_rating {
+  width: 100%;
+  .review_rating_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  button {
+    height: 50px;
+    background-color: rgb(3, 11, 54);
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

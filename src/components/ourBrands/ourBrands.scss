@@ -1,0 +1,36 @@
+.ourBrands {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+  // background-color: red;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
+  }
+
+  .ourBrands_inner {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+    // padding: 0 15px;
+    width: 75%;
+    flex-wrap: wrap;
+  }
+}

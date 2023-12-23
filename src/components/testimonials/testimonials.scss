@@ -1,0 +1,73 @@
+.rating img {
+  width: 50px;
+  height: 50px;
+}
+
+.testimonials_slider .slick-slide {
+  margin: auto; /* Adjust the value as needed for the desired gap */
+  position: relative; /* Ensure relative positioning for absolute child */
+  width: 60%;
+}
+
+.testimonials_slider .slick-prev,
+.slick-next {
+  font-size: 54px;
+  z-index: 1;
+}
+
+.testimonials_slider .slick-prev {
+  left: -10px;
+}
+
+.testimonials_slider .slick-next {
+  right: -10px;
+}
+
+.testimonials_slider .slick-active .image_desc {
+  opacity: 1; /* Show the description for the active slide */
+}
+
+.testimonials {
+  text-align: center;
+  background-color: lightblue;
+  margin-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  // margin: auto;
+}
+
+.testimonials_label {
+  font-size: 1em;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 50%;
+  font-size: 1.4em;
+  padding-top: 40px;
+}
+
+.rating img:hover {
+  cursor: pointer;
+}
+
+.rating img:active {
+  transform: scale(0.9);
+}
+
+.rating img.active {
+  background-color: #720808;
+  border-radius: 50%;
+}
+
+.show_testimonials {
+  display: flex;
+  width: 60%;
+  margin: auto;
+}

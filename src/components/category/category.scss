@@ -1,0 +1,64 @@
+.full-screen-slider {
+  width: 80%;
+  margin-left: auto;
+
+  & h3 {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
+
+  p {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
+}
+
+.full-screen-slider .slick-slide img {
+  width: 100%;
+  max-width: 25vw;
+  max-height: 40vh;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0;
+}
+
+.full-screen-slider .slick-slide {
+  margin: 0; /* Adjust the value as needed for the desired gap */
+  position: relative; /* Ensure relative positioning for absolute child */
+  background-color: lightblue;
+  width: 100%;
+}
+
+.full-screen-slider .slick-prev,
+.full-screen-slider .slick-next {
+  font-size: 44px;
+  z-index: 1;
+}
+
+.full-screen-slider .slick-prev {
+  margin-left: 10px;
+}
+
+.full-screen-slider .slick-next {
+  margin-right: 10px;
+}
+
+.category {
+  background-color: lightblue;
+  padding: 43px 20px 102px 0;
+  margin-bottom: 50px;
+}
+
+.slick-slide {
+  text-align: center;
+}
+
+.image_map {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}

@@ -1,0 +1,54 @@
+/* ImageSlider.css */
+.flash_sale_slider {
+  width: 85%;
+  margin-left: auto;
+
+  & h3 {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
+
+  & p {
+    width: 85%;
+    text-align: left;
+    // margin-left: auto;
+    padding-left: 10px;
+  }
+}
+
+.flash_sale_slider .slick-slide img {
+  width: 90%;
+  // max-width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0;
+}
+
+.flash_sale_slider .slick-prev,
+.flash_sale_slider .slick-next {
+  font-size: 44px;
+  z-index: 1;
+}
+
+.flash_sale_slider .slick-prev {
+  margin-left: 10px;
+}
+
+.flash_sale_slider .slick-next {
+  margin-right: 10px;
+}
+
+.flash_sale_label {
+  width: 85%;
+  text-align: left;
+  margin-left: auto;
+  padding: 0;
+}
+
+.flash_sale {
+  padding: 43px 20px 102px 0;
+  margin-bottom: 50px;
+  background-color: rgb(208, 255, 0);
+}
