@@ -1,0 +1,49 @@
+.customer_reviews {
+  display: flex;
+  flex-direction: column;
+  #filter {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    select {
+      display: flex;
+      height: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 0.7em;
+      border-radius: 10px;
+    }
+  }
+  .customer_reviews__cont {
+    display: flex;
+    gap: 50px;
+    border-top: 1px solid #ddc9c9;
+    border-bottom: 1px solid #ddc9c9;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    // background-color: blue;
+    .review_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding-left: 50px;
+      .reviewer__image {
+        width: 20%;
+        padding: 5px;
+        background-color: yellow;
+        border-radius: 15px;
+      }
+    }
+    .review_subject {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+}

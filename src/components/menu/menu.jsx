@@ -16,7 +16,7 @@ const Menu = () => {
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
 
-      const showHeaderThreshold = windowHeight * 0.13;
+      const showHeaderThreshold = windowHeight * 0.1;
 
       setIsHeaderVisible(scrollPosition < showHeaderThreshold);
     };
@@ -38,8 +38,8 @@ const Menu = () => {
 
   return (
     <div className="menu">
-      <div className="menu_logo">{isHeaderVisible && <Logo />}</div>
       <div className="menu_cont">
+        <div className="menu_logo">{isHeaderVisible && <Logo />}</div>
         <ul>
           {navLinks.map(({ url, name, hasDropdown }) => (
             <li

@@ -30,7 +30,7 @@ const Watches = () => {
         <Header />
       </div>
       <Menu />
-      <h2>watches Collection</h2>
+      <h2>Watches Collection</h2>
       <div className="watches_cont">
         {watches.map((product) => (
           <div className="watches_card" key={product.id}>

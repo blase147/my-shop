@@ -15,6 +15,7 @@ import Footer from '../footer/footer';
 import CopyRight from '../copyright/copyright';
 import CreditCardLogos from '../copyright/creditCardLogos';
 import Services from '../services/services';
+import Review from '../review/customerReview';
 
 const Product = () => {
   const { id } = useParams();
@@ -187,6 +188,7 @@ const Product = () => {
       <Link to="/products">Go to Products</Link>
       <Link to="/viewCart">Go to Cart</Link>
       <Link to="/">Go back</Link>
+      <Review />
       <Newsletter />
       <Footer />
       <CopyRight />
